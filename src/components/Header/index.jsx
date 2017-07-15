@@ -50,10 +50,12 @@ export default class Header extends React.Component {
                 });
             }
             this.setState({
-                headerPosition: scrollTop > 50,
                 lastScrollTop: scrollTop
             });
         }
+        this.setState({
+            headerPosition: scrollTop > 100
+        })
     };
 
     render() {
