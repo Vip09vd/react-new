@@ -9,6 +9,7 @@ module.exports = {
         filename: 'bundle.[hash].js',
         path: path.resolve(__dirname, 'dist')
     },
+    devtool: 'eval',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(['dist']),

@@ -5,6 +5,7 @@ import Main from './components/Main';
 import {render} from 'react-dom';
 import {HashRouter, Route, Redirect} from "react-router-dom";
 import ICO from "./components/ICO/index";
+import Footer from "./components/Footer/index";
 
 render(
     <HashRouter>
@@ -15,6 +16,7 @@ render(
                 <Route path="/ico" component={ICO}/>
                 <Redirect from="/*" to="/main"/>
             </div>
+            <Footer/>
         </div>
     </HashRouter>,
     document.getElementById('root')

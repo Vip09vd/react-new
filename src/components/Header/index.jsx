@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Link} from "react-router-dom";
+import Utils from "../../lib/Utils";
 
-export default class Header extends React.Component {
+export default class Header extends Component {
     constructor() {
         super();
         this.state = {
@@ -22,9 +23,9 @@ export default class Header extends React.Component {
     handleNavLinkClick = ({target}) => {
         const sections = this.getSections();
         const section = sections[target.id];
-        window.scrollTo(0, section.offsetTop - 70);
+        Utils.scrollToY(window, section.offsetTop - 70, 1200);
         this.setState({
-            activeSectionIndex: target.id,
+            activeSectionIndex: +target.id,
             lastScrollTop: section.offsetTop - 70
         })
     };
@@ -32,7 +33,6 @@ export default class Header extends React.Component {
     getSections() {
         return Array.prototype.slice.call(document.getElementsByTagName('section'));
     }
-
 
     handleScroll = () => {
         const scrollTop = document.body.scrollTop;
@@ -55,36 +55,31 @@ export default class Header extends React.Component {
         }
         this.setState({
             headerPosition: scrollTop > 100
-        })
+        });
     };
 
     render() {
         return (
             <header className={this.state.headerPosition ? "scrolled" : ""}>
-                <div className="container">
-                    <div className="logo">
+                    <Link className="logo" to="/main">
                         <div className="logo__img"/>
                         <span>CareWallet</span>
-                    </div>
+                    </Link>
                     <ul className="nav">
-                        <li><a className={this.state.activeSectionIndex == 0 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 0 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="0" href="javascript:void(0)">Company</a></li>
-                        <li><a className={this.state.activeSectionIndex == 7 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 7 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="7" href="javascript:void(0)">Project Plan</a></li>
                         <li><Link to="/ico">ICO</Link></li>
-                        <li><a className={this.state.activeSectionIndex == 1 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 1 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Team</a></li>
-                        <li><a className={this.state.activeSectionIndex == 2 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 2 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="2" href="javascript:void(0)">Documents</a></li>
-                        <li><a className={this.state.activeSectionIndex == 3 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 3 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="3" href="javascript:void(0)">Contacts</a></li>
-                        <li><a className={this.state.activeSectionIndex == 4 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 4 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="4" href="javascript:void(0)">FAQ </a></li>
-                        <li>
-                            <button className="btn">Buy Now</button>
-                        </li>
                     </ul>
-                </div>
             </header>
         )
     }

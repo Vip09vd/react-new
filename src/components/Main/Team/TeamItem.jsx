@@ -1,4 +1,4 @@
-import React, { PropTypes } from "react";
+import React, {PropTypes} from "react";
 
 export default class TeamItem extends React.Component {
     static propTypes = {
@@ -10,7 +10,7 @@ export default class TeamItem extends React.Component {
     };
 
     render() {
-        const { userImg, userName, userPosition } = this.props.user;
+        const {userImg, userName, userPosition} = this.props.user;
         return (
             <div className="team__item">
                 <div className="team__item--img">
