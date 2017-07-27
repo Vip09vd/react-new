@@ -1,5 +1,4 @@
 import React from 'react';
-import photo from '../../assets/img/photo-1.png';
 import TeamItem from "./TeamItem";
 
 export default class Team extends React.Component {

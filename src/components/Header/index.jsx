@@ -8,7 +8,8 @@ export default class Header extends Component {
         this.state = {
             headerPosition: false,
             activeSectionIndex: 0,
-            lastScrollTop: 0
+            lastScrollTop: 0,
+            menuCollapse: false
         };
     }
 
@@ -58,28 +59,41 @@ export default class Header extends Component {
         });
     };
 
+    toggleClass = () => {
+        const currentState = this.state.menuCollapse;
+        this.setState({ menuCollapse: !currentState });
+    };
+
+
+
     render() {
         return (
             <header className={this.state.headerPosition ? "scrolled" : ""}>
+                <div className="header-buttons">
+                    <Link to="/ico">CareWallet ICO Underway Buy Tokens</Link>
+                </div>
+                <div className="header-wrap">
                     <Link className="logo" to="/main">
                         <div className="logo__img"/>
                         <span>CareWallet</span>
                     </Link>
-                    <ul className="nav">
+                    <div className={this.state.menuCollapse ? 'open': 'close'} onClick={this.toggleClass} id="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul className={this.state.menuCollapse ? 'nav open': 'nav'}>
                         <li><a className={this.state.activeSectionIndex === 0 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="0" href="javascript:void(0)">Company</a></li>
+                               onClick={this.handleNavLinkClick} id="0" href="javascript:void(0)">Product</a></li>
                         <li><a className={this.state.activeSectionIndex === 7 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="7" href="javascript:void(0)">Project Plan</a></li>
-                        <li><Link to="/ico">ICO</Link></li>
+                               onClick={this.handleNavLinkClick} id="7" href="javascript:void(0)">Company</a></li>
                         <li><a className={this.state.activeSectionIndex === 1 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Team</a></li>
-                        <li><a className={this.state.activeSectionIndex === 2 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="2" href="javascript:void(0)">Documents</a></li>
-                        <li><a className={this.state.activeSectionIndex === 3 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="3" href="javascript:void(0)">Contacts</a></li>
-                        <li><a className={this.state.activeSectionIndex === 4 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="4" href="javascript:void(0)">FAQ </a></li>
+                               onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Community</a></li>
+                        <li><a className={this.state.activeSectionIndex === 1 ? "active" : ""}
+                               onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Media</a></li>
+                        <li><Link to="/ico">ICO</Link></li>
                     </ul>
+                </div>
             </header>
         )
     }

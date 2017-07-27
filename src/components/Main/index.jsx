@@ -1,206 +1,318 @@
 import React from 'react';
 import Team from './Team';
 import Head from "./Head/index";
+import Video from "./Video/index";
 
 export default class Main extends React.Component {
     render() {
         return (
             <main>
                 <Head/>
+                <section className="manage">
+                    <div className="container">
+                        <div className="section-description">
+                            <h1>What is CareWallet</h1>
+                        </div>
+                        <div className="manage-wrapper">
+                            <div className="manage__item">
+                                <div className="manage__item--icn">
+                                    <div className="icn icn-protect"></div>
+                                </div>
+                                <p className="manage__item--description">A decentralized healthcare and benefit platform
+                                    that is efficient, cost
+                                    effective and always verifiable</p>
+                            </div>
+                            <div className="manage__item">
+                                <div className="manage__item--icn">
+                                    <div className="icn icn-cards"></div>
+                                </div>
+                                <p className="manage__item--description">A protocol that securely connects and
+                                    automatically syncs all parties</p>
+                            </div>
+                            <div className="manage__item">
+                                <div className="manage__item--icn">
+                                    <div className="icn icn-heart"></div>
+                                </div>
+                                <p className="manage__item--description">A intelligent currency that understand who is
+                                    paying whom, for what</p>
+                            </div>
+                            <div className="manage__item">
+                                <div className="manage__item--icn">
+                                    <div className="icn icn-protect"></div>
+                                </div>
+                                <p className="manage__item--description">A smart application that empowers individuals
+                                    with instant access to
+                                    their records, benefits, options and obligations</p>
+                            </div>
+                            <div className="manage__item">
+                                <div className="manage__item--icn">
+                                    <div className="icn icn-cards"></div>
+                                </div>
+                                <p className="manage__item--description">An ever growing repository of human knowledge
+                                    and best practices
+                                    for care delivery, prevention and better health outcomes</p>
+                            </div>
+                            {/*<div className="manage__item">*/}
+                            {/*<div className="manage__item--icn">*/}
+                            {/*<div className="icn icn-heart"></div>*/}
+                            {/*</div>*/}
+                            {/*<p className="manage__item--description">*/}
+                            {/*- clinical services, consolidating providers’ contacts, your medical history and lab*/}
+                            {/*results;*/}
+                            {/*</p>*/}
+                            {/*</div>*/}
+                            {/*<div className="manage__item">*/}
+                            {/*<div className="manage__item--icn">*/}
+                            {/*<div className="icn icn-protect"></div>*/}
+                            {/*</div>*/}
+                            {/*<p className="manage__item--description">*/}
+                            {/*- insurance policies, choosing the best personalized terms and conditions for you*/}
+                            {/*and your family;*/}
+                            {/*</p>*/}
+                            {/*</div>*/}
+                            {/*<div className="manage__item">*/}
+                            {/*<div className="manage__item--icn">*/}
+                            {/*<div className="icn icn-cards"></div>*/}
+                            {/*</div>*/}
+                            {/*<p className="manage__item--description">*/}
+                            {/*- proceed your payments, giving you an opportunity to aggregate funds, make smart*/}
+                            {/*payments, linked to personal, employer and government funds*/}
+                            {/*</p>*/}
+                            {/*</div>*/}
+                            {/*<div className="manage__item">*/}
+                            {/*<div className="manage__item--icn">*/}
+                            {/*<div className="icn icn-heart"></div>*/}
+                            {/*</div>*/}
+                            {/*<p className="manage__item--description">*/}
+                            {/*- clinical services, consolidating providers’ contacts, your medical history and lab*/}
+                            {/*results;*/}
+                            {/*</p>*/}
+                            {/*</div>*/}
+                        </div>
+                    </div>
+                </section>
+                <section className="services">
+                    <div className="container">
+                        <h1>Who can use CareWallet to optimize and streamline
+                            healthcare and benefit administration</h1>
+                        <div className="services-wrapper">
+                            <div className="services__item">
+                                <div className="icn icn-insurers"/>
+                                <h4 className="services__item--heading">insurers</h4>
+                                <button className="btn btn-sm btn-blue">more info</button>
+                            </div>
+                            <div className="services__item">
+                                <div className="icn icn-providers"/>
+                                <h4 className="services__item--heading">providers</h4>
+                                <button className="btn btn-sm btn-blue">more info</button>
+                            </div>
+                            <div className="services__item">
+                                <div className="icn icn-employers"/>
+                                <h4 className="services__item--heading">employers</h4>
+                                <button className="btn btn-sm btn-blue">more info</button>
+                            </div>
+                            <div className="services__item">
+                                <div className="icn icn-agencies"/>
+                                <h4 className="services__item--heading">agencies</h4>
+                                <button className="btn btn-sm btn-blue">more info</button>
+                            </div>
+                            <div className="services__item">
+                                <div className="icn icn-developers"/>
+                                <h4 className="services__item--heading">developers</h4>
+                                <button className="btn btn-sm btn-blue">more info</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="smart-cards">
+                    <div className="icn icn-bg-1"/>
+                    <div className="icn icn-bg-2"/>
+                    <div className="container">
+                        {/*<h1>CW Smart Cards - <br/> an innovation that will reduce cost for everyone</h1>*/}
+                        <div className="card-list">
+                            <ul className="card-list__side">
+                                <li>- Insurance companies, doctors, labs, pharmacies, employers, benefit administrators
+                                    and government agencies can use the CW protocol to publish smart application
+                                    cards that contain relevant information and logic to process the transaction and are
+                                    automatically processed by the right carewallet
+                                </li>
+                                <li>- All you need to access any carewallet is the email address of the wallet owner and
+                                    their permission
+                                </li>
+                                <li>- All information and logic is secure and encrypted and compliant with appropriate
+                                    reglations
+                                </li>
+                                <li>- All processing is decentralized and all logic is interpreted by the appropriate
+                                    wallet
+                                </li>
+                                <li>- No more data, system or logic silos
+                                </li>
+                                <li>- All smart cards remain in sync
+                                </li>
+                            </ul>
+                            {/*<ul className="card-list__side">*/}
+                            {/*<li>- Smart cards is published by IC, hospital or a Lab or an employer.</li>*/}
+                            {/*<li>- Example: your smart discount card will let you know during your pharmacy visit,*/}
+                            {/*what discounts are available in this place and will help you to manage your*/}
+                            {/*pharmacy, and therapeutic services expenses.*/}
+                            {/*</li>*/}
+                            {/*<li>- Other issued cards will assume the role of your smart coordinator for сare,*/}
+                            {/*pharmacy, medical transportation, home care, social programs.*/}
+                            {/*</li>*/}
+                            {/*<li>- Smart cards is published by IC, hospital or a Lab or an employer.</li>*/}
+                            {/*<li>- Example: your smart discount card will let you know during your pharmacy visit,*/}
+                            {/*what discounts are available in this place and will help you to manage your*/}
+                            {/*pharmacy, and therapeutic services expenses.*/}
+                            {/*</li>*/}
+                            {/*<li>- Other issued cards will assume the role of your smart coordinator for сare,*/}
+                            {/*pharmacy, medical transportation, home care, social programs.*/}
+                            {/*</li>*/}
+                            {/*</ul>*/}
+                        </div>
+                    </div>
+                </section>
+                <section className="useful edge">
+                    <div className="section-description">
+                        <h2>Imagine a world where healthcare and benefit administration is efficient, effective and easy
+                            to use, for everyone</h2>
+                    </div>
+                    <div className="container">
+                        <div className="useful__icn"></div>
+                        <div className="useful__info">
+                            <ul>
+                                <li>No need to make phone calls before seeing the doctor
+                                </li>
+                                <li>No need to learn a strange new language to properly understand your
+                                    insurance benefits
+                                </li>
+                                <li>No need to guess how much you have used and how much is available,
+                                    past and future costs and payments
+                                </li>
+                                <li>Automatic awareness of every action and piece of information that affects
+                                    your healthcare decisions, options and cost
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <Video />
+                <section className="technologies">
+                    <div className="container">
+                        <h2>CareWallet will create a new smart healthcare system build on innovative technologies
+                            where: </h2>
+                        <div className="technologies__wrapper">
+                            <div className="technologies__wrapper--item first">
+                                <p>You will forget about necessity to call insurance company to verify your insurance or
+                                    covered benefits.</p>
+                            </div>
+                            <div className="technologies__wrapper--item second">
+                                <p>Your doctor does not need to wait 901-20 days to find out how much the payment for
+                                    his services will be.</p>
+                            </div>
+                            <div className="technologies__wrapper--item third">
+                                <p>All your medical history is readily accessible and completely secure, so if anyone
+                                    tries to access it without permission, you will immediately know and can stop
+                                    it.</p>
+                            </div>
+                            <div className="technologies__wrapper--item fourth">
+                                <p>All information is secured in accordance with privacy and data security laws and all
+                                    your information is under your direct control and yet immediately accessible to
+                                    anyone you want to give access to.</p>
+                            </div>
+                            <div className="technologies__wrapper--item fifth">
+                                <p>You will have the power to manage all your information and under your direct control,
+                                    at the same time immediately accessible to anyone you want to give access to
+                                    CW is an intelligent tool for every individual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="impact">
+                    <div className="container">
+                        <h3 className="impact__heading">Types of cards + examples</h3>
+                        <div className="impact__item">
+                            <h3><span className="icn icn-insurers"/>For providers</h3>
+                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
+                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
+                                a new apartment tower across the street forces him to flee his own home. There is the
+                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
+                                construction equipment that echoes in his head.</p>
+                        </div>
+                        <div className="impact__item">
+                            <h3><span className="icn icn-providers"/>For providers</h3>
+                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
+                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
+                                a new apartment tower across the street forces him to flee his own home. There is the
+                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
+                                construction equipment that echoes in his head.</p>
+                        </div>
+                        <div className="impact__item">
+                            <h3><span className="icn icn-employers"/>For providers</h3>
+                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
+                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
+                                a new apartment tower across the street forces him to flee his own home. There is the
+                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
+                                construction equipment that echoes in his head.</p>
+                        </div>
+                        <div className="impact__item">
+                            <h3><span className="icn icn-agencies"/>For providers</h3>
+                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
+                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
+                                a new apartment tower across the street forces him to flee his own home. There is the
+                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
+                                construction equipment that echoes in his head.</p>
+                        </div>
+                        <div className="impact__item">
+                            <h3><span className="icn icn-developers"/>For providers</h3>
+                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
+                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
+                                a new apartment tower across the street forces him to flee his own home. There is the
+                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
+                                construction equipment that echoes in his head.</p>
+                        </div>
+                    </div>
+                </section>
+                <section className="edge">
+                    <div className="container">
+                        <h3>Interested in publishing smart cards on CWP?</h3>
+                        <button className="btn ">Register</button>
+                    </div>
+                </section>
                 <section className="purchase">
                     <div className="container">
-                        <div>
-                            <p><i>“It is time to rethink and revolutionize the biggest part of US economy by employing a
-                                smart contract
-                                model that replaces archaic systems and administrative processes with an intelligent
-                                benefit wallet that
-                                is highly efficient, is programmable and can be easily and quickly programmed for
-                                different benefit
-                                models (employer-employee and government-citizen)”
-                            </i></p>
-                            <h4> - Pradeep Goel, CEO of CareWallet</h4>
+                        <div className="purchase-wrapper">
+                            <div className="ceo-img">
+                            </div>
+                            <div className="quote">
+                                <p><i>“It is time to rethink and revolutionize the biggest part of US economy by
+                                    employing a
+                                    smart contract
+                                    model that replaces archaic systems and administrative processes with an intelligent
+                                    benefit wallet that
+                                    is highly efficient, is programmable and can be easily and quickly programmed for
+                                    different benefit
+                                    models (employer-employee and government-citizen)”
+                                </i></p>
+                                <h4> - Pradeep Goel, CEO of CareWallet</h4>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section className="useful">
-                    <h2 className="useful__heading edge">How will CareWallet be useful for me?</h2>
+                <section className="docs">
                     <div className="container">
-                        <p>Through CareWallet you can always and instantly access YOUR BENEFIT INFO, MED
-                            RECOREDS AND HANDLE ALL FINANC TRANSACTIONS.
-                        </p>
-                        <p>
-                            Your carewallet IS INTELLIGENT AND HELPS YOU MANAGE YOUR HEALTHCARE
-                            DECISIONS AND TRANSACTIONS. All you need is an email ad.
-                        </p>
-                        <p>every medical, lab, therapeutic and financial transaction and grant access for as little
-                            or as long as you need. This convergence of data will reduce duplication of services,
-                            avoid waste and unnecessary costs and eliminate delays in care.
-                        </p>
+                        <h1>Security, privacy and access control</h1>
+                        <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
+                            whine of refrigerated grocery trucks by the curb makes things worse. And construction of
+                            a new apartment tower across the street forces him to flee his own home. There is the
+                            deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
+                            construction equipment that echoes in his head.</p>
+                        <button className="btn btn-sm btn-blue-inverse">PDF</button>
                     </div>
                 </section>
-                {/*<section className="wallet-image">*/}
-                {/*<div className="wallet">*/}
-                {/*<div className="wallet--side left">*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card first card-insurance">*/}
-                {/*<div className="head">*/}
-                {/*Medical Care*/}
-                {/*</div>*/}
-                {/*<div className="body">*/}
-                {/**/}
-                {/*</div>*/}
-                {/*</div>*/}
-                {/*</div>*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card"></div>*/}
-                {/*</div>*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card"></div>*/}
-                {/*</div>*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card last"></div>*/}
-                {/*</div>*/}
-                {/*</div>*/}
-                {/*<div className="wallet--edge"></div>*/}
-                {/*<div className="wallet--side right">*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card first"></div>*/}
-                {/*</div>*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card"></div>*/}
-                {/*</div>*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card"></div>*/}
-                {/*</div>*/}
-                {/*<div className="cardholder">*/}
-                {/*<div className="card last"></div>*/}
-                {/*</div>*/}
-                {/*</div>*/}
-                {/*</div>*/}
-                {/*</section>*/}
-                <section className="services edge">
-                    {/*<div className="section-description">*/}
-                    {/*<h2>How does CareWallet look like?</h2>*/}
-                    {/*<p>CareWallet contains smart cards that are programmable, automatically synced and*/}
-                    {/*configured to meet*/}
-                    {/*individual*/}
-                    {/*needs, and will deliver better outcomes at lower cost while ensuring proper use of funds*/}
-                    {/*and timely*/}
-                    {/*payments*/}
-                    {/*to care providers.</p>*/}
-                    {/*</div>*/}
-                    <div className="services-wrapper">
-                        <div className="services__item">
-                            <div className="icn icn-pencil"/>
-                            <h4 className="services__item--heading"> for investors</h4>
-                            <p className="services__item--description">Its a good one to invest your money in your own
-                                future.</p>
-                            <button className="btn btn-inverse">more info</button>
-                        </div>
-                        <div className="services__item">
-                            <div className="icn icn-layers"/>
-                            <h4 className="services__item--heading">for providers</h4>
-                            <p className="services__item--description">Its a good one to invest your money in your own
-                                future.</p>
-                            <button className="btn btn-inverse">more info</button>
-                        </div>
-                        <div className="services__item">
-                            <div className="icn icn-settings"/>
-                            <h4 className="services__item--heading">for employers</h4>
-                            <p className="services__item--description">Its a good one to invest your money in your own
-                                future.</p>
-                            <button className="btn btn-inverse">more info</button>
-                        </div>
-                        <div className="services__item">
-                            <div className="icn icn-marketing"/>
-                            <h4 className="services__item--heading">for individuals</h4>
-                            <p className="services__item--description">Its a good one to invest your money in your own
-                                future.</p>
-                            <button className="btn btn-inverse">more info</button>
-                        </div>
-                        <div className="services__item">
-                            <div className="icn icn-marketing"/>
-                            <h4 className="services__item--heading">for agencies</h4>
-                            <p className="services__item--description">Its a good one to invest your money in your own
-                                future.</p>
-                            <button className="btn btn-inverse">more info</button>
-                        </div>
-                        <div className="services__item">
-                            <div className="icn icn-marketing"/>
-                            <h4 className="services__item--heading">for developers</h4>
-                            <p className="services__item--description">Its a good one to invest your money in your own
-                                future.</p>
-                            <button className="btn btn-inverse">more info</button>
-                        </div>
-                    </div>
-                </section>
-                <section className="video">
-                    <div className="container">
-                        <h2>How does CareWallet look like?</h2>
-                        <p>Watch this simple one-minute video explainer for CareWallet</p>
-                        <div className="video-img">
-                            <div className="icn-play"></div>
-                        </div>
-                        <h4>
-                            <div className="icn icn-hand"></div>
-                            Easy way to access
-                        </h4>
-                        <p>Its a good one to invest your money in your own future. </p>
-                    </div>
-                </section>
-                <section className="impact">
-                    <h2 className="edge impact__heading">Market impact</h2>
-                    <div className="container">
-                        <div className="impact__item">
-                            <h3><span className="icn icn-hand"></span>For providers section</h3>
-                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
-                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
-                                a new apartment tower across the street forces him to flee his own home. There is the
-                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
-                                construction equipment that echoes in his head.</p>
-                        </div>
-                        <div className="impact__item">
-                            <h3><span className="icn icn-hand"></span>For providers section</h3>
-                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
-                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
-                                a new apartment tower across the street forces him to flee his own home. There is the
-                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
-                                construction equipment that echoes in his head.</p>
-                        </div>
-                        <div className="impact__item">
-                            <h3><span className="icn icn-hand"></span>For providers section</h3>
-                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
-                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
-                                a new apartment tower across the street forces him to flee his own home. There is the
-                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
-                                construction equipment that echoes in his head.</p>
-                        </div>
-                        <div className="impact__item">
-                            <h3><span className="icn icn-hand"></span>For providers section</h3>
-                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
-                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
-                                a new apartment tower across the street forces him to flee his own home. There is the
-                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
-                                construction equipment that echoes in his head.</p>
-                        </div>
-                        <div className="impact__item">
-                            <h3><span className="icn icn-hand"></span>For providers section</h3>
-                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
-                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
-                                a new apartment tower across the street forces him to flee his own home. There is the
-                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
-                                construction equipment that echoes in his head.</p>
-                        </div>
-                        <div className="impact__item">
-                            <h3><span className="icn icn-hand"></span>For providers section</h3>
-                            <p>Traffic roars through his neighborhood on Manhattan’s Upper East Side at all hours. The
-                                whine of refrigerated grocery trucks by the curb makes things worse. And construction of
-                                a new apartment tower across the street forces him to flee his own home. There is the
-                                deafening rat-a-tat of jack hammers and the incessant banging and high-pitched wail of
-                                construction equipment that echoes in his head.</p>
-                        </div>
-                    </div>
-                </section>
+
+
                 {/*<section className="features">*/}
                 {/*<div className="container">*/}
                 {/*<div className="features__item">*/}
@@ -338,31 +450,23 @@ export default class Main extends React.Component {
                 {/*<button className="btn">load more</button>*/}
                 {/*</div>*/}
                 {/*</section>*/}
-                <section className="services">
+                <section className="media">
                     <div className="container">
                         <div className="section-description">
                             <h3>Media About Us</h3>
                         </div>
-                        <div className="services-wrapper">
-                            <div className="services__item">
-                                <div className="icn icn-blockchain"/>
-                                {/*<h4 className="service__item--heading">Blockchain</h4>*/}
+                        <div className="media-wrapper">
+                            <div className="media__item">
+                                <div className="icn icn-emercoin"/>
                             </div>
-                            <div className="services__item">
-                                <div className="icn icn-agreement"/>
-                                {/*<h4 className="service__item--heading">Smart Contracts</h4>*/}
+                            <div className="media__item">
+                                <div className="icn icn-hashcoins"/>
                             </div>
-                            <div className="services__item">
-                                <div className="icn icn-api"/>
-                                {/*<h4 className="service__item--heading">APIs</h4>*/}
+                            <div className="media__item">
+                                <div className="icn icn-cryptopay"/>
                             </div>
-                            <div className="services__item">
-                                <div className="icn icn-data"/>
-                                {/*<h4 className="service__item--heading">Data Models</h4>*/}
-                            </div>
-                            <div className="services__item">
-                                <div className="icn icn-big-data"/>
-                                {/*<h4 className="service__item--heading">Big Data</h4>*/}
+                            <div className="media__item">
+                                <div className="icn icn-ambisafe"/>
                             </div>
                         </div>
                     </div>

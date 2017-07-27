@@ -4,6 +4,25 @@ export default class Footer extends Component {
     render() {
         return (
             <footer>
+                <div className="social">
+                    <h2>CareWallet</h2>
+                    <p>The website is owned by CareWallet</p>
+                    <p><strong>2017 CareWallet Inc. All rights reserved</strong></p>
+                    <div className="social__icons">
+                        <a className="social__icons--fb" href="">
+                            <div className="icn icn-facebook"></div>
+                        </a>
+                        <a className="social__icons--li" href="">
+                            <div className="icn icn-linkedin"></div>
+                        </a>
+                        <a className="social__icons--fb" href="">
+                            <div className="icn icn-facebook"></div>
+                        </a>
+                        <a className="social__icons--li" href="">
+                            <div className="icn icn-linkedin"></div>
+                        </a>
+                    </div>
+                </div>
                 <div className="information">
                     <ul className="about">
                         <h4>Pages</h4>
@@ -29,24 +48,6 @@ export default class Footer extends Component {
                         <li><a href="">Team</a></li>
                         <li><a href="">FAQ</a></li>
                     </ul>
-                </div>
-                <div className="social">
-                    <div className="social__icons">
-                        <a className="social__icons--fb" href="">
-                            <div className="icn icn-facebook"></div>
-                        </a>
-                        <a className="social__icons--li" href="">
-                            <div className="icn icn-linkedin"></div>
-                        </a>
-                        <a className="social__icons--fb" href="">
-                            <div className="icn icn-facebook"></div>
-                        </a>
-                        <a className="social__icons--li" href="">
-                            <div className="icn icn-linkedin"></div>
-                        </a>
-                    </div>
-                    <p>The website is owned by CareWallet</p>
-                    <p><strong>2017 CareWallet Inc. All rights reserved</strong></p>
                 </div>
             </footer>
         );

@@ -12,8 +12,11 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-responsive-carousel": "^3.1.24",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "react-slick": "^0.14.11",
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
