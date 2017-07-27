@@ -169,6 +169,10 @@ h4 {
   min-width: 30px;
   min-height: 30px;
   display: inline-block;
+  @include mobile{
+    min-width: 60px;
+    min-height: 60px;
+  }
 }
 
 .container {
@@ -180,6 +184,9 @@ h4 {
   height: 100%;
   padding: 0 30px;
   margin: 0 auto;
+  @include mobile{
+    padding: 0 15px;
+  }
 }
 
 li {
@@ -306,6 +313,9 @@ header {
 
 section {
   padding: 4em 0;
+  @include mobile{
+    padding: 1em 0;
+  }
 }
 
 .section-description {
@@ -319,6 +329,10 @@ section {
   height: 100vh;
   background-size: cover;
   position: relative;
+  @include mobile{
+    height: auto;
+    padding-top: 3em;
+  }
   .container {
     flex-direction: column;
     height: 100%;
@@ -328,6 +342,10 @@ section {
   .head-wrap {
     display: flex;
     width: 100%;
+    @include mobile{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   h1 {
     max-width: 900px;
@@ -340,14 +358,23 @@ section {
     background-size: contain;
     height: 350px;
     width: 50%;
+    @include mobile{
+      height: 150px;
+    }
   }
   &__info {
     color: #fff;
+    max-width: 700px;
+    align-self: center;
     h2 {
       margin: .5em 0;
     }
     p {
       color: #fff;
+    }
+    @include mobile{
+      order: 2;
+      text-align: center;
     }
   }
   .arrow {
@@ -361,6 +388,9 @@ section {
     border: 1px solid #fff;
     border-radius: 50%;
     animation: jump 1.5s linear infinite;
+    @include mobile{
+      display: none;
+    }
     span {
       background: url("../img/arrow-down.svg") no-repeat;
       background-size: contain;
@@ -378,6 +408,9 @@ section {
     .btn {
       position: relative;
       max-width: 250px;
+      @include mobile{
+        margin-bottom: 10px;
+      }
       span {
         position: absolute;
         left: 10px;
@@ -388,6 +421,10 @@ section {
         text-transform: none;
         text-align: left;
       }
+    }
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
@@ -422,14 +459,23 @@ section {
 }
 
 .useful {
+  .container{
+    @include mobile{
+      flex-direction: column;
+    }
+  }
   &__icn {
     background: url("../img/wallet-icn.svg") no-repeat;
     background-size: contain;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
   }
   &__info {
     width: 50%;
+    @include mobile{
+      width: 100%;
+      padding-left: 10px;
+    }
     ul {
       list-style: disc;
       li {
@@ -483,11 +529,15 @@ section {
   border-radius: 10px;
   align-items: center;
   box-shadow: $base-shadow;
+  z-index: 1;
   &__side {
     //width: 40%;
     li {
       margin-bottom: 10px;
     }
+  }
+  @include mobile{
+    padding: 1em;
   }
 }
 
@@ -507,6 +557,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
     &--heading {
       text-transform: uppercase;
     }
@@ -527,7 +578,11 @@ section {
   &-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    @include mobile{
+      flex-direction: column;
+    }
   }
   &__item {
     .icn {
@@ -580,9 +635,18 @@ section {
       border: 1px solid $primary;
       border-radius: 50%;
       background-size: cover;
+      @include mobile{
+        width: 200px;
+      }
+    }
+    @include mobile{
+      flex-direction: column;
     }
     .quote {
       width: 75%;
+      @include mobile{
+        width: 100%;
+      }
       h4 {
         font-size: $big-font-size - 2px;
         text-align: right;
@@ -637,6 +701,17 @@ section {
   .container {
     display: block;
     text-align: center;
+    @include mobile{
+      padding: 0 30px;
+    }
+    .video-img{
+      iframe{
+        @include mobile{
+          width: 100% !important;
+          height: 150px !important;
+        }
+      }
+    }
   }
   .slick-prev:before, .slick-next:before {
     color: #000;
@@ -728,6 +803,9 @@ section {
     align-items: flex-start;
     width: 100%;
     flex-wrap: wrap;
+    @include mobile{
+      justify-content: center;
+    }
     &--item {
       width: 185px;
       padding: 25px 20px;
@@ -735,6 +813,10 @@ section {
       text-align: center;
       border: 1px solid $primary;
       border-radius: 10px;
+      @include mobile{
+        width: 100%;
+        margin-bottom: 10px;
+      }
       &:before {
         position: absolute;
         display: block;
@@ -796,6 +878,10 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @include mobile{
+    flex-direction: column;
+    padding: 2em 1em;
+  }
   h2 {
     color: #fff;
   }
@@ -803,8 +889,14 @@ footer {
     width: 45%;
     display: flex;
     justify-content: space-between;
+    @include mobile{
+      width: 100%;
+    }
     ul {
       width: 300px;
+      @include mobile{
+        width: auto;
+      }
       h4 {
         color: #fff;
       }
@@ -821,6 +913,10 @@ footer {
   }
   .social {
     width: 45%;
+    @include mobile{
+      width: 100%;
+      margin-bottom: 10px;
+    }
     &__icons {
       display: flex;
       justify-content: space-between;

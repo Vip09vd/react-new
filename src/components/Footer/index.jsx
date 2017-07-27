@@ -6,7 +6,6 @@ export default class Footer extends Component {
             <footer>
                 <div className="social">
                     <h2>CareWallet</h2>
-                    <p>The website is owned by CareWallet</p>
                     <p><strong>2017 CareWallet Inc. All rights reserved</strong></p>
                     <div className="social__icons">
                         <a className="social__icons--fb" href="">

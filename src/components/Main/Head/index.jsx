@@ -8,7 +8,7 @@ export default class Head extends Component {
                     <h1>Join a revolution of care, convenience
                         and cost savings</h1>
                     <div className="head-wrap">
-                        <div className="head__info section-description">
+                        <div className="head__info">
                             <h2>CareWallet</h2>
                             <p> CareWallet is creating a new smart healthcare system
                                 built on innovative technologies of blockchain, smart
