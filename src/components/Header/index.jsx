@@ -83,15 +83,15 @@ export default class Header extends Component {
                         <span></span>
                     </div>
                     <ul className={this.state.menuCollapse ? 'nav open': 'nav'}>
-                        <li><a className={this.state.activeSectionIndex === 0 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 1 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="0" href="javascript:void(0)">Product</a></li>
-                        <li><a className={this.state.activeSectionIndex === 7 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="7" href="javascript:void(0)">Company</a></li>
-                        <li><a className={this.state.activeSectionIndex === 1 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 2 ? "active" : ""}
+                               onClick={this.handleNavLinkClick} id="7" href="javascript:void(0)">ICO</a></li>
+                        <li><a className={this.state.activeSectionIndex === 3 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Community</a></li>
-                        <li><a className={this.state.activeSectionIndex === 1 ? "active" : ""}
+                        <li><a className={this.state.activeSectionIndex === 4 ? "active" : ""}
                                onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Media</a></li>
-                        <li><Link to="/ico">ICO</Link></li>
+                        <li><Link to="/company">Company</Link></li>
                     </ul>
                 </div>
             </header>

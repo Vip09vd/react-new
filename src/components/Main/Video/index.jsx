@@ -11,7 +11,10 @@ export default class Video extends Component {
         return (
             <section className="video">
                 <div className="container">
-                    <h1>What is CareWallet?</h1>
+                    <div className="section-description">
+                        <h2>CareWallet is an intelligent and decentralized platform that
+                            makes life easier for everyone</h2>
+                    </div>
                     <Slider dots={true} slidesToShow={1}>
                         <div>
                             <div className="video-img">
@@ -42,6 +45,33 @@ export default class Video extends Component {
                             </div>
                         </div>
                     </Slider>
+                    <div className="video-items">
+                        <div className="video-item">
+                            <p className="item-heading">consumers and families</p>
+                            <p>Cost savings and convenience</p>
+                        </div>
+                        <div className="video-item">
+                            <p className="item-heading">employers</p>
+                            <p>Cost savings and healthier employees</p>
+                        </div>
+                        <div className="video-item">
+                            <p className="item-heading">insurers and adminstrators</p>
+                            <p>Cost savings and happier customers</p>
+                        </div>
+                        <div className="video-item">
+                            <p className="item-heading">doctors, labs, pharmacies, hospitals</p>
+                            <p>Cost savings and less administrative burden</p>
+                        </div>
+                        <div className="video-item">
+                            <p className="item-heading">for government programs</p>
+                            <p>Cost savings and better outcome for citizens</p>
+                        </div>
+                        <div className="video-item">
+                            <p className="item-heading">everyone benefits</p>
+                            <p>Reduction in fraud, waste, abuse and inefficiency</p>
+                        </div>
+                    </div>
+                    <a href="#"><p>Read the peer reviewed publication by Dr. Randall and our CEO</p></a>
                 </div>
             </section>
         );
