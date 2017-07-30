@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import Media from "../Main/Media/index";
 
 export default class Company extends Component {
     render() {
@@ -7,14 +6,11 @@ export default class Company extends Component {
             <div className="company-wrapper">
                 <section className="company-head">
                     <div className="container">
-                        <h1>About Company</h1>
+                        <h1>About Us</h1>
                     </div>
                 </section>
                 <section className="history edge">
                     <div className="container">
-                        <div className="section-description">
-                            <h2>History About the Company</h2>
-                        </div>
                         <p>SmartCareWallet company was established to revolutionize global healthcare and benefit
                             administration through intelligent automation and wide range of state of the art
                             technology including blockchain, smart contracts, machine learning, cloud and big
@@ -23,6 +19,7 @@ export default class Company extends Component {
                             of experience in insurance systems, government programs, clinical management, care
                             coordination and benefit administration. With the support of expert advisory board,
                             SmartCareWallet aspires to build a platform that everyone can benefit from.</p>
+                        <p>Was established in 2017</p>
                     </div>
                 </section>
                 <section className="launch">
@@ -56,71 +53,6 @@ export default class Company extends Component {
                                 up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
                                 going through the cites of the word in classical literature, discovered the
                             </p></div>
-                        </div>
-                    </div>
-                </section>
-                <section className="media-about edge">
-                    <div className="section-description">
-                        <h2>Media about us</h2>
-                    </div>
-                    <div className="container">
-                        <div className="media-about__item">
-                            <div className="media-about__item--logo">
-                                <div className="icn icn-cryptopay"></div>
-                            </div>
-                            <p className="media-about__item-description">
-                                After blockbuster ICO, Bancor
-                                takes first step to become
-                                ‘YouTube for currency‘
-                            </p>
-                            <span>July 17, 2017</span>
-                        </div>
-                        <div className="media-about__item">
-                            <div className="media-about__item--logo">
-                                <div className="icn icn-hashcoins"></div>
-                            </div>
-                            <p className="media-about__item-description">
-                                Israel's blockchain blockbuster
-                            </p>
-                            <span>July 17, 2017</span>
-                        </div>
-                        <div className="media-about__item">
-                            <div className="media-about__item--logo">
-                                <div className="icn icn-cryptopay"></div>
-                            </div>
-                            <p className="media-about__item-description">
-                                Broken Record: Bancor Raises $144 Mln in Less Than Three Hours
-                            </p>
-                            <span>July 17, 2017</span>
-                        </div>
-                        <div className="media-about__item">
-                            <div className="media-about__item--logo">
-                                <div className="icn icn-cryptopay"></div>
-                            </div>
-                            <p className="media-about__item-description">
-                                After blockbuster ICO, Bancor
-                                takes first step to become
-                                ‘YouTube for currency‘
-                            </p>
-                            <span>July 17, 2017</span>
-                        </div>
-                        <div className="media-about__item">
-                            <div className="media-about__item--logo">
-                                <div className="icn icn-hashcoins"></div>
-                            </div>
-                            <p className="media-about__item-description">
-                                Israel's blockchain blockbuster
-                            </p>
-                            <span>July 17, 2017</span>
-                        </div>
-                        <div className="media-about__item">
-                            <div className="media-about__item--logo">
-                                <div className="icn icn-cryptopay"></div>
-                            </div>
-                            <p className="media-about__item-description">
-                                Broken Record: Bancor Raises $144 Mln in Less Than Three Hours
-                            </p>
-                            <span>July 17, 2017</span>
                         </div>
                     </div>
                 </section>
@@ -209,9 +141,127 @@ export default class Company extends Component {
                                         </li>
                                     </li>
                                 </ul>
-                                 <p><strong>Interesting external reference:</strong><a href="https://www.wsj.com/articles/no-headline-available-1380475094"> WSJ article on Pradeep Goel and Lego approach to building healthcare exchanges
-                                 </a></p>
+                                <p><a href="https://www.wsj.com/articles/no-headline-available-1380475094">The Wall
+                                    Street Journal</a></p>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <div className="advisors">
+                    <div className="container">
+                        <div className="section-description">
+                            <h2>Advisors</h2>
+                        </div>
+                        <div className="advisors-wrapper">
+                            <div className="advisors__item">
+                                <div className="advisors__item--photo ceo-img"></div>
+                                <div className="advisors__item--description">
+                                    <p className="name">Pradeep Goel</p>
+                                    <p className="position">CEO</p>
+                                    <p className="bio">Lorem ipsum dolor sit amet,
+                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
+                                        ratione
+                                        unde!</p>
+                                </div>
+                            </div>
+                            <div className="advisors__item">
+                                <div className="advisors__item--photo ceo-img"></div>
+                                <div className="advisors__item--description">
+                                    <p className="name">Pradeep Goel</p>
+                                    <p className="position">CEO</p>
+                                    <p className="bio">Lorem ipsum dolor sit ametlit.
+                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
+                                        ratione
+                                        unde!</p>
+                                </div>
+                            </div>
+                            <div className="advisors__item">
+                                <div className="advisors__item--photo ceo-img"></div>
+                                <div className="advisors__item--description">
+                                    <p className="name">Pradeep Goel</p>
+                                    <p className="position">CEO</p>
+                                    <p className="bio">Lorem ipsum dolor sit ametlit.
+                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
+                                        ratione
+                                        unde!</p>
+                                </div>
+                            </div>
+                            <div className="advisors__item">
+                                <div className="advisors__item--photo ceo-img"></div>
+                                <div className="advisors__item--description">
+                                    <p className="name">Pradeep Goel</p>
+                                    <p className="position">CEO</p>
+                                    <p className="bio">Lorem ipsum dolor sit ametlit.
+                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
+                                        ratione
+                                        unde!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section className="media-about edge">
+                    <div className="section-description">
+                        <h2>Media about us</h2>
+                    </div>
+                    <div className="container">
+                        <div className="media-about__item">
+                            <div className="media-about__item--logo">
+                                <div className="icn icn-cryptopay"></div>
+                            </div>
+                            <p className="media-about__item-description">
+                                After blockbuster ICO, Bancor
+                                takes first step to become
+                                ‘YouTube for currency‘
+                            </p>
+                            <span>July 17, 2017</span>
+                        </div>
+                        <div className="media-about__item">
+                            <div className="media-about__item--logo">
+                                <div className="icn icn-hashcoins"></div>
+                            </div>
+                            <p className="media-about__item-description">
+                                Israel's blockchain blockbuster
+                            </p>
+                            <span>July 17, 2017</span>
+                        </div>
+                        <div className="media-about__item">
+                            <div className="media-about__item--logo">
+                                <div className="icn icn-cryptopay"></div>
+                            </div>
+                            <p className="media-about__item-description">
+                                Broken Record: Bancor Raises $144 Mln in Less Than Three Hours
+                            </p>
+                            <span>July 17, 2017</span>
+                        </div>
+                        <div className="media-about__item">
+                            <div className="media-about__item--logo">
+                                <div className="icn icn-cryptopay"></div>
+                            </div>
+                            <p className="media-about__item-description">
+                                After blockbuster ICO, Bancor
+                                takes first step to become
+                                ‘YouTube for currency‘
+                            </p>
+                            <span>July 17, 2017</span>
+                        </div>
+                        <div className="media-about__item">
+                            <div className="media-about__item--logo">
+                                <div className="icn icn-hashcoins"></div>
+                            </div>
+                            <p className="media-about__item-description">
+                                Israel's blockchain blockbuster
+                            </p>
+                            <span>July 17, 2017</span>
+                        </div>
+                        <div className="media-about__item">
+                            <div className="media-about__item--logo">
+                                <div className="icn icn-cryptopay"></div>
+                            </div>
+                            <p className="media-about__item-description">
+                                Broken Record: Bancor Raises $144 Mln in Less Than Three Hours
+                            </p>
+                            <span>July 17, 2017</span>
                         </div>
                     </div>
                 </section>

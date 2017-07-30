@@ -1065,7 +1065,7 @@ strong {
   }
   .company-head {
     width: 100%;
-    background: url("../img/bg-company.jpg") no-repeat;
+    background: linear-gradient(to bottom, rgba(216, 216, 216, 0.4), rgba(216, 216, 216, 0.47)), url("../img/bg-company.jpg") center top;
     background-size: cover;
     height: 500px;
     .container {
@@ -1100,6 +1100,9 @@ strong {
 .history {
   .container {
     flex-direction: column;
+  }
+  p{
+    font-size: 22px;
   }
 }
 
@@ -1252,6 +1255,37 @@ strong {
             list-style-type: circle;
           }
         }
+      }
+    }
+  }
+}
+
+.advisors{
+  @extend .executive;
+  display: none;
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    @extend .executive__item;
+    width: 45%;
+    margin-bottom: 20px;
+    &--photo{
+      margin-right: 30px;
+    }
+    &--description {
+      @extend .executive__item--description;
+      p {
+        margin-bottom: 5px;
+      }
+      .name {
+        letter-spacing: 3px;
+        font-family: $heading-font;
+      }
+      .position {
+        letter-spacing: 3px;
       }
     }
   }
