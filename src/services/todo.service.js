@@ -74,7 +74,7 @@ export class TodoService {
         }
     ];
 
-    getData(first, count = 5){
+    getData(first, count = 5) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 if (first < 0 || first >= this.todos.length) {
@@ -83,6 +83,23 @@ export class TodoService {
                     resolve(this.todos.slice(first, first + count));
                 }
             }, 100);
+        });
+    }
+
+    getTotalCount() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(this.todos.length);
+            }, 10);
+        });
+    }
+
+    addData(data) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                this.todos.unshift(data);
+                resolve(data);
+            }, 10);
         });
     }
 }

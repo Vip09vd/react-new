@@ -4,13 +4,18 @@ export default class Todo extends Component {
 	static propTypes = {
 		todo: PropTypes.shape({
             heading: PropTypes.string,
-            text: PropTypes.string
+            text: PropTypes.string,
+            onDelete: PropTypes.func
         })
 	};
 
     constructor(props) {
 		super(props);
 	}
+
+	handleDelete = () => {
+        this.props.onDelete();
+    };
 
 	render() {
 		return (
@@ -22,7 +27,7 @@ export default class Todo extends Component {
                 </div>
                 <div className="buttons">
                     <button className="btn btn-sm btn-blue btn-edit">Edit</button>
-                    <button className="btn btn-sm btn-blue btn-remove">Delete</button>
+                    <button onClick={this.handleDelete} className="btn btn-sm btn-blue btn-remove">Delete</button>
                 </div>
             </div>
 		);

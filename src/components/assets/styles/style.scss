@@ -441,7 +441,7 @@ section {
     padding: 10px;
     color: $primary;
     position: relative;
-    @include mobile{
+    @include mobile {
       font-size: 16px;
       font-family: $heading-font;
     }
@@ -477,12 +477,12 @@ section {
 }
 
 .useful {
-  &-wrapper{
+  &-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    @include mobile{
+    @include mobile {
       flex-direction: column;
     }
   }
@@ -491,7 +491,7 @@ section {
     background-size: contain;
     height: 400px;
     width: 45%;
-    @include mobile{
+    @include mobile {
       height: 200px;
       width: 100%;
       margin-bottom: 20px;
@@ -563,14 +563,14 @@ section {
   }
 }
 
-.slick-initialized.slick-slider{
+.slick-initialized.slick-slider {
   margin-bottom: 50px;
 }
 
 .services {
   background: #f8f8f8;
   text-align: center;
-  &__head-wrap{
+  &__head-wrap {
     display: flex;
     align-items: center;
   }
@@ -596,7 +596,7 @@ section {
       text-transform: capitalize;
       font-weight: 700;
     }
-    &--subheading{
+    &--subheading {
       text-align: left;
     }
     .btn-inverse {
@@ -632,7 +632,7 @@ section {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    @include mobile{
+    @include mobile {
       flex-direction: column;
     }
     &--item {
@@ -644,11 +644,11 @@ section {
       margin: 15px;
       min-height: 100px;
       justify-content: flex-start;
-      @include mobile{
+      @include mobile {
         margin: 0;
         padding: 15px;
       }
-      .btn{
+      .btn {
         align-self: flex-start;
       }
     }
@@ -680,10 +680,10 @@ section {
 .edge {
   background-image: linear-gradient(to right, #56b4f5, #6b98f4);
   color: #fff;
-  h2{
+  h2 {
     color: #ffffff;
   }
-  h3{
+  h3 {
     color: #ffffff;
   }
   p {
@@ -782,10 +782,10 @@ iframe {
   .slick-prev:before, .slick-next:before {
     color: #000;
   }
-  .slick-prev{
+  .slick-prev {
     left: -20px;
   }
-  .slick-next{
+  .slick-next {
     right: -20px;
   }
   .video-items {
@@ -799,7 +799,7 @@ iframe {
       margin-bottom: 40px;
       display: flex;
       flex-direction: column;
-      @include mobile{
+      @include mobile {
         margin-bottom: 20px;
       }
       .item-heading {
@@ -904,9 +904,9 @@ iframe {
       }
     }
   }
-  p{
+  p {
     text-align: center;
-    @include mobile{
+    @include mobile {
       text-align: justify;
     }
   }
@@ -916,7 +916,7 @@ iframe {
   background: url("../img/community.jpg") no-repeat;
   background-size: cover;
   text-align: center;
-  h2{
+  h2 {
     color: #fff;
   }
   &__wrapper {
@@ -945,7 +945,7 @@ iframe {
   .icn {
     margin: 0 20px;
   }
-  p{
+  p {
     text-align: justify;
   }
 }
@@ -1136,13 +1136,13 @@ strong {
   .side {
     width: 30%;
     margin-bottom: 20px;
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
   }
   .side-company {
     width: 60%;
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
     &__heading {
@@ -1175,7 +1175,7 @@ strong {
 .media-about {
   .container {
     flex-wrap: wrap;
-    @include desktop{
+    @include desktop {
       flex-direction: row;
     }
   }
@@ -1195,7 +1195,7 @@ strong {
       .icn {
         width: 100%;
         background-position: left;
-        @include mobile{
+        @include mobile {
           min-height: 0;
           height: 30px;
         }
@@ -1208,7 +1208,7 @@ strong {
       color: #414042;
       font-size: 16px;
       line-height: 1.25;
-      @include mobile{
+      @include mobile {
         line-height: 1;
         font-size: 14px;
         height: 70px;
@@ -1227,20 +1227,20 @@ strong {
 }
 
 .company-movie {
-  .container{
-    @include desktop{
+  .container {
+    @include desktop {
       flex-direction: row;
     }
   }
   &__video {
     width: 50%;
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
   }
   &__info {
     width: 50%;
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
     ul {
@@ -1276,13 +1276,13 @@ strong {
 .executive {
   &__item {
     display: flex;
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       align-items: center;
     }
     &--description {
       width: calc(100% - 200px);
-      @include mobile{
+      @include mobile {
         width: 100%;
       }
       p {
@@ -1341,7 +1341,7 @@ strong {
   }
 }
 
-.tooltip{
+.tooltip {
   color: $gray;
   position: absolute;
   padding: 5px;
@@ -1350,7 +1350,7 @@ strong {
   box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
   z-index: 2;
   display: block;
-  &:before{
+  &:before {
     position: absolute;
     display: block;
     width: 10px;
@@ -1362,48 +1362,66 @@ strong {
 
     content: '';
   }
-  &.top{
+  &.top {
     transform: translateY(calc(-100% - 10px)) translateX(-50%);
     box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
-    &:before{
+    &:before {
       bottom: -4px;
       box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
     }
   }
-  &.bottom{
+  &.bottom {
     transform: translateY(10px) translateX(-50%);
-    &:before{
+    &:before {
       top: -4px;
     }
   }
 }
 
-.todo-list{
-  .container{
+.todo-list {
+  position: relative;
+  .container {
     justify-content: flex-start;
   }
-  &-wrapper{
+  &-wrapper {
     height: 300px;
     overflow-Y: scroll;
     padding-bottom: 2em;
   }
-  #add-btn{
+  #add-btn {
     margin-left: auto;
+  }
+  .modal-window {
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    background: #eee;
+    border-radius: 5px;
+    box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
+    .modal-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
 
-.todo-item{
+.todo-item {
   display: flex;
   align-items: center;
   border-bottom: 2px solid $primary;
-  input{
+  padding: 0 20px;
+  input {
     margin-right: 20px;
   }
-  .info{
+  .info {
     width: 450px;
   }
-  .buttons{
-    width:250px;
+  .buttons {
+    width: 250px;
     justify-content: space-between;
     display: flex;
     align-items: center;
