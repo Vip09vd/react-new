@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react';
+import Advisor from "./Advisors/Advisor/index";
+import Advisors from "./Advisors/index";
 
 export default class Company extends Component {
     render() {
@@ -11,7 +13,7 @@ export default class Company extends Component {
                 </section>
                 <section className="history edge">
                     <div className="container">
-                        <p>SmartCareWallet company was established to revolutionize global healthcare and benefit
+                        <p>SmartCareWallet company was established in 2017 to revolutionize global healthcare and benefit
                             administration through intelligent automation and wide range of state of the art
                             technology including blockchain, smart contracts, machine learning, cloud and big
                             data.</p>
@@ -19,7 +21,6 @@ export default class Company extends Component {
                             of experience in insurance systems, government programs, clinical management, care
                             coordination and benefit administration. With the support of expert advisory board,
                             SmartCareWallet aspires to build a platform that everyone can benefit from.</p>
-                        <p>Was established in 2017</p>
                     </div>
                 </section>
                 <section className="launch">
@@ -60,7 +61,7 @@ export default class Company extends Component {
                     <div className="container">
                         <div className="company-movie__video">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/P0GoYzq_KAY"
-                                    frameborder="0" allowfullscreen/>
+                                    frameBorder="0" allowFullScreen/>
                         </div>
                         <div className="company-movie__info">
                             <ul>
@@ -147,59 +148,60 @@ export default class Company extends Component {
                         </div>
                     </div>
                 </section>
-                <div className="advisors">
-                    <div className="container">
-                        <div className="section-description">
-                            <h2>Advisors</h2>
-                        </div>
-                        <div className="advisors-wrapper">
-                            <div className="advisors__item">
-                                <div className="advisors__item--photo ceo-img"></div>
-                                <div className="advisors__item--description">
-                                    <p className="name">Pradeep Goel</p>
-                                    <p className="position">CEO</p>
-                                    <p className="bio">Lorem ipsum dolor sit amet,
-                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
-                                        ratione
-                                        unde!</p>
-                                </div>
-                            </div>
-                            <div className="advisors__item">
-                                <div className="advisors__item--photo ceo-img"></div>
-                                <div className="advisors__item--description">
-                                    <p className="name">Pradeep Goel</p>
-                                    <p className="position">CEO</p>
-                                    <p className="bio">Lorem ipsum dolor sit ametlit.
-                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
-                                        ratione
-                                        unde!</p>
-                                </div>
-                            </div>
-                            <div className="advisors__item">
-                                <div className="advisors__item--photo ceo-img"></div>
-                                <div className="advisors__item--description">
-                                    <p className="name">Pradeep Goel</p>
-                                    <p className="position">CEO</p>
-                                    <p className="bio">Lorem ipsum dolor sit ametlit.
-                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
-                                        ratione
-                                        unde!</p>
-                                </div>
-                            </div>
-                            <div className="advisors__item">
-                                <div className="advisors__item--photo ceo-img"></div>
-                                <div className="advisors__item--description">
-                                    <p className="name">Pradeep Goel</p>
-                                    <p className="position">CEO</p>
-                                    <p className="bio">Lorem ipsum dolor sit ametlit.
-                                        Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,
-                                        ratione
-                                        unde!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Advisors/>
+                {/*<div className="advisors">*/}
+                    {/*<div className="container">*/}
+                        {/*<div className="section-description">*/}
+                            {/*<h2>Advisors</h2>*/}
+                        {/*</div>*/}
+                        {/*<div className="advisors-wrapper">*/}
+                            {/*<div className="advisors__item">*/}
+                                {/*<div className="advisors__item--photo ceo-img"></div>*/}
+                                {/*<div className="advisors__item--description">*/}
+                                    {/*<p className="name">Pradeep Goel</p>*/}
+                                    {/*<p className="position">CEO</p>*/}
+                                    {/*<p className="bio">Lorem ipsum dolor sit amet,*/}
+                                        {/*Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,*/}
+                                        {/*ratione*/}
+                                        {/*unde!</p>*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                            {/*<div className="advisors__item">*/}
+                                {/*<div className="advisors__item--photo ceo-img"></div>*/}
+                                {/*<div className="advisors__item--description">*/}
+                                    {/*<p className="name">Pradeep Goel</p>*/}
+                                    {/*<p className="position">CEO</p>*/}
+                                    {/*<p className="bio">Lorem ipsum dolor sit ametlit.*/}
+                                        {/*Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,*/}
+                                        {/*ratione*/}
+                                        {/*unde!</p>*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                            {/*<div className="advisors__item">*/}
+                                {/*<div className="advisors__item--photo ceo-img"></div>*/}
+                                {/*<div className="advisors__item--description">*/}
+                                    {/*<p className="name">Pradeep Goel</p>*/}
+                                    {/*<p className="position">CEO</p>*/}
+                                    {/*<p className="bio">Lorem ipsum dolor sit ametlit.*/}
+                                        {/*Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,*/}
+                                        {/*ratione*/}
+                                        {/*unde!</p>*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                            {/*<div className="advisors__item">*/}
+                                {/*<div className="advisors__item--photo ceo-img"></div>*/}
+                                {/*<div className="advisors__item--description">*/}
+                                    {/*<p className="name">Pradeep Goel</p>*/}
+                                    {/*<p className="position">CEO</p>*/}
+                                    {/*<p className="bio">Lorem ipsum dolor sit ametlit.*/}
+                                        {/*Consequuntur eaque earum harum in ipsa laudantium maiores molestiae quos,*/}
+                                        {/*ratione*/}
+                                        {/*unde!</p>*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
                 <section className="media-about edge">
                     <div className="section-description">
                         <h2>Media about us</h2>

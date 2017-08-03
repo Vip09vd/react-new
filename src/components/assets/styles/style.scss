@@ -111,10 +111,6 @@ h3 {
     background: url("../img/programming.svg") no-repeat center;
     background-size: contain;
   }
-  &-play {
-    background: url("../img/play-icn.svg") no-repeat center;
-    background-size: contain;
-  }
   &-facebook {
     background: url("../img/facebook-logo.svg") no-repeat center;
     background-size: contain;
@@ -166,7 +162,8 @@ h3 {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   max-width: 1240px;
   width: 100%;
@@ -174,7 +171,7 @@ h3 {
   padding: 0 30px;
   margin: 0 auto;
   @include mobile {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 }
 
@@ -183,7 +180,6 @@ li {
 }
 
 header {
-  position: fixed;
   width: 100%;
   color: #fff;
   display: flex;
@@ -191,7 +187,7 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: all .2s linear;
-  z-index: 1;
+  z-index: 3;
   background: #414042;
   @include mobile {
     flex-direction: row;
@@ -218,6 +214,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
   .logo {
     font-size: 34px;
@@ -259,14 +256,12 @@ header {
         transform: scaleX(0);
         background: #fff;
         transition: transform .3s linear;
-        transform-origin: left;
+        transform-origin: center;
 
         content: '';
       }
       &:hover,
       &.active {
-        font-weight: 600;
-        font-size: 15px;
         &:after {
           transform: scaleX(1);
         }
@@ -284,6 +279,7 @@ header {
       overflow: hidden;
       box-shadow: $base-shadow;
       transition: all .5s ease-in-out;
+      z-index: 3;
       &.open {
         max-height: 999px;
         transition: all .5s ease-in-out;
@@ -299,19 +295,13 @@ header {
   }
 
   &.scrolled {
+    position: fixed;
     background-image: linear-gradient(to right, #56b4f5, #6b98f4);
     box-shadow: 0px -7px 20px 0px;
-    z-index: 3;
+    transition: all .2s linear;
     .nav {
       @include mobile {
         background-image: linear-gradient(to right, #56b4f5, #6b98f4);
-      }
-      a {
-        &:hover,
-        &.active {
-          font-weight: 600;
-          font-size: 15px;
-        }
       }
     }
   }
@@ -335,16 +325,10 @@ section {
   height: 100vh;
   background-size: cover;
   position: relative;
-  padding-top: 120px;
+  padding-top: 2em;
   @include mobile {
     height: auto;
     padding-top: 3em;
-  }
-  .container {
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
   }
   .head-wrap {
     display: flex;
@@ -361,7 +345,7 @@ section {
     color: #fff;
   }
   &__img {
-    background: url("../img/wallet-pic.png") no-repeat center;
+    background: url("../img/wallet111.svg") no-repeat center;
     background-size: contain;
     height: 350px;
     width: 50%;
@@ -413,10 +397,6 @@ section {
 }
 
 .manage {
-  .container {
-    justify-content: center;
-    flex-direction: column;
-  }
   .manage-wrapper {
     width: 100%;
     display: flex;
@@ -461,6 +441,10 @@ section {
     padding: 10px;
     color: $primary;
     position: relative;
+    @include mobile{
+      font-size: 16px;
+      font-family: $heading-font;
+    }
     &:after {
       position: absolute;
       width: 20px;
@@ -493,27 +477,36 @@ section {
 }
 
 .useful {
-  .container {
-    @include mobile {
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include mobile{
       flex-direction: column;
     }
   }
   &__icn {
-    background: url("../img/wallet-icn.svg") no-repeat;
+    background: url("../img/imagine.svg") no-repeat;
     background-size: contain;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 45%;
+    @include mobile{
+      height: 200px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__info {
     width: 50%;
     @include mobile {
       width: 100%;
-      padding-left: 10px;
+      padding-left: 20px;
     }
     ul {
       list-style: disc;
       li {
-        font-size: 24px;
+        font-size: 18px;
         line-height: 1.5;
         margin-bottom: 1em;
       }
@@ -524,12 +517,8 @@ section {
 .smart-cards {
   position: relative;
   background-color: #f8f8f8;
-  .container {
-    flex-direction: column;
-    align-items: center;
-    h1 {
-      text-align: center;
-    }
+  h1 {
+    text-align: center;
   }
   .icn-bg-1 {
     background: url('../img/wallet-icn-blue.svg') no-repeat;
@@ -574,11 +563,16 @@ section {
   }
 }
 
+.slick-initialized.slick-slider{
+  margin-bottom: 50px;
+}
+
 .services {
   background: #f8f8f8;
   text-align: center;
-  .container {
-    flex-direction: column;
+  &__head-wrap{
+    display: flex;
+    align-items: center;
   }
   .services-wrapper {
     display: flex;
@@ -589,14 +583,21 @@ section {
   }
   &__item {
     width: 100%;
+    max-width: 600px;
+    margin: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
+    flex-direction: column;
     .icn {
       margin-right: 10px;
     }
     &--heading {
       text-transform: capitalize;
+      font-weight: 700;
+    }
+    &--subheading{
+      text-align: left;
     }
     .btn-inverse {
       max-width: 140px;
@@ -608,10 +609,6 @@ section {
 
 .media {
   background: #f8f8f8;
-  .container {
-    flex-direction: column;
-    max-width: 900px;
-  }
   &-wrapper {
     display: flex;
     justify-content: space-between;
@@ -631,29 +628,35 @@ section {
 }
 
 .join {
-  .container {
-    flex-direction: column;
-  }
   &__wrapper {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    @include mobile{
+      flex-direction: column;
+    }
     &--item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 50%;
+      flex-wrap: wrap;
+      width: 300px;
+      margin: 15px;
       min-height: 100px;
-      justify-content: space-between;
+      justify-content: flex-start;
+      @include mobile{
+        margin: 0;
+        padding: 15px;
+      }
+      .btn{
+        align-self: flex-start;
+      }
     }
   }
 }
 
 .features {
   background: $creme;
-  .container {
-    flex-direction: column;
-  }
   &__item {
     display: flex;
     justify-content: space-between;
@@ -677,6 +680,12 @@ section {
 .edge {
   background-image: linear-gradient(to right, #56b4f5, #6b98f4);
   color: #fff;
+  h2{
+    color: #ffffff;
+  }
+  h3{
+    color: #ffffff;
+  }
   p {
     color: #fff;
   }
@@ -755,24 +764,29 @@ section {
 //  }
 //}
 
+iframe {
+  @include mobile {
+    width: 100% !important;
+    height: 150px !important;
+  }
+}
+
 .video {
   .container {
     display: block;
     text-align: center;
-    @include mobile {
-      padding: 0 30px;
-    }
     .video-img {
-      iframe {
-        @include mobile {
-          width: 100% !important;
-          height: 150px !important;
-        }
-      }
+
     }
   }
   .slick-prev:before, .slick-next:before {
     color: #000;
+  }
+  .slick-prev{
+    left: -20px;
+  }
+  .slick-next{
+    right: -20px;
   }
   .video-items {
     margin-top: 3em;
@@ -781,11 +795,13 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     .video-item {
-      width: 300px;
-      margin-bottom: 20px;
+      width: 310px;
+      margin-bottom: 40px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      @include mobile{
+        margin-bottom: 20px;
+      }
       .item-heading {
         font-weight: 900;
         text-transform: capitalize;
@@ -866,12 +882,9 @@ section {
 }
 
 .technologies {
-  .container {
-    flex-direction: column;
-  }
-  h2 {
-    text-align: center;
-    margin: 2em 0;
+  background: #f8f8f8;
+  h2, h3 {
+    color: $primary;
   }
   &__wrapper {
     display: flex;
@@ -880,25 +893,45 @@ section {
     align-items: center;
     width: 100%;
     margin: 2em 0;
-    h4 {
-      color: $primary;
+    &--icn {
+      background: url("../img/techno1.svg") no-repeat;
+      background-size: contain;
+      width: 500px;
+      height: 400px;
+      @include mobile {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+  p{
+    text-align: center;
+    @include mobile{
+      text-align: justify;
     }
   }
 }
 
 .community {
-  .container {
-    flex-direction: column;
+  background: url("../img/community.jpg") no-repeat;
+  background-size: cover;
+  text-align: center;
+  h2{
+    color: #fff;
   }
   &__wrapper {
     display: flex;
     align-items: center;
-    &--icn {
-      width: 60%;
-      height: 300px;
+    color: #fff;
+    @include mobile {
+      flex-direction: column;
     }
+
     &--item {
-      width: 40%;
+      @include mobile {
+        width: auto;
+        text-align: center;
+      }
     }
   }
 }
@@ -907,11 +940,13 @@ section {
   background: #f8f8f8;
   .container {
     max-width: 900px;
-    flex-direction: column;
     align-items: flex-start;
   }
   .icn {
     margin: 0 20px;
+  }
+  p{
+    text-align: justify;
   }
 }
 
@@ -921,7 +956,6 @@ section {
   }
   .container {
     max-width: 900px;
-    flex-direction: column;
     align-items: flex-start;
   }
   &__item {
@@ -936,12 +970,6 @@ section {
     p {
       text-align: justify;
     }
-  }
-}
-
-.docs {
-  .container {
-    flex-direction: column;
   }
 }
 
@@ -1058,7 +1086,6 @@ strong {
 }
 
 .company-wrapper {
-  padding-top: 100px;
   p {
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -1068,24 +1095,21 @@ strong {
     background: linear-gradient(to bottom, rgba(216, 216, 216, 0.4), rgba(216, 216, 216, 0.47)), url("../img/bg-company.jpg") center top;
     background-size: cover;
     height: 500px;
-    .container {
-      flex-direction: column;
-      justify-content: center;
-      h1 {
-        font-size: 48px;
-        position: relative;
-        letter-spacing: 6px;
-        &:after {
-          position: absolute;
-          width: 84%;
-          left: 8%;
-          bottom: 10px;
-          height: 2px;
-          display: block;
-          background: $primary;
 
-          content: '';
-        }
+    h1 {
+      font-size: 48px;
+      position: relative;
+      letter-spacing: 6px;
+      &:after {
+        position: absolute;
+        width: 84%;
+        left: 8%;
+        bottom: 10px;
+        height: 2px;
+        display: block;
+        background: $primary;
+
+        content: '';
       }
     }
   }
@@ -1098,18 +1122,12 @@ strong {
 }
 
 .history {
-  .container {
-    flex-direction: column;
-  }
-  p{
+  p {
     font-size: 22px;
   }
 }
 
 .launch {
-  .container {
-    flex-direction: column;
-  }
   &-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1118,9 +1136,15 @@ strong {
   .side {
     width: 30%;
     margin-bottom: 20px;
+    @include mobile{
+      width: 100%;
+    }
   }
   .side-company {
     width: 60%;
+    @include mobile{
+      width: 100%;
+    }
     &__heading {
       display: flex;
       align-items: center;
@@ -1151,7 +1175,9 @@ strong {
 .media-about {
   .container {
     flex-wrap: wrap;
-    justify-content: center;
+    @include desktop{
+      flex-direction: row;
+    }
   }
   &__item {
     width: 300px;
@@ -1169,6 +1195,10 @@ strong {
       .icn {
         width: 100%;
         background-position: left;
+        @include mobile{
+          min-height: 0;
+          height: 30px;
+        }
       }
     }
     &:hover {
@@ -1178,6 +1208,12 @@ strong {
       color: #414042;
       font-size: 16px;
       line-height: 1.25;
+      @include mobile{
+        line-height: 1;
+        font-size: 14px;
+        height: 70px;
+        overflow: hidden;
+      }
     }
     span {
       color: #414042;
@@ -1191,11 +1227,22 @@ strong {
 }
 
 .company-movie {
+  .container{
+    @include desktop{
+      flex-direction: row;
+    }
+  }
   &__video {
     width: 50%;
+    @include mobile{
+      width: 100%;
+    }
   }
   &__info {
     width: 50%;
+    @include mobile{
+      width: 100%;
+    }
     ul {
       padding-left: 40px;
       li {
@@ -1227,13 +1274,17 @@ strong {
 }
 
 .executive {
-  .container {
-    flex-direction: column;
-  }
   &__item {
     display: flex;
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
     &--description {
       width: calc(100% - 200px);
+      @include mobile{
+        width: 100%;
+      }
       p {
         margin-bottom: 5px;
       }
@@ -1260,10 +1311,9 @@ strong {
   }
 }
 
-.advisors{
-  @extend .executive;
-  display: none;
-  &-wrapper{
+.advisors {
+  //display: none;
+  &-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1272,7 +1322,7 @@ strong {
     @extend .executive__item;
     width: 45%;
     margin-bottom: 20px;
-    &--photo{
+    &--photo {
       margin-right: 30px;
     }
     &--description {
@@ -1288,5 +1338,74 @@ strong {
         letter-spacing: 3px;
       }
     }
+  }
+}
+
+.tooltip{
+  color: $gray;
+  position: absolute;
+  padding: 5px;
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  display: block;
+  &:before{
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #eee;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-50%) rotate(45deg);
+
+    content: '';
+  }
+  &.top{
+    transform: translateY(calc(-100% - 10px)) translateX(-50%);
+    box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
+    &:before{
+      bottom: -4px;
+      box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+  &.bottom{
+    transform: translateY(10px) translateX(-50%);
+    &:before{
+      top: -4px;
+    }
+  }
+}
+
+.todo-list{
+  .container{
+    justify-content: flex-start;
+  }
+  &-wrapper{
+    height: 300px;
+    overflow-Y: scroll;
+    padding-bottom: 2em;
+  }
+  #add-btn{
+    margin-left: auto;
+  }
+}
+
+.todo-item{
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $primary;
+  input{
+    margin-right: 20px;
+  }
+  .info{
+    width: 450px;
+  }
+  .buttons{
+    width:250px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
   }
 }

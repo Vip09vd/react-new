@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="559px" height="419px" viewBox="0 0 559 419" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 44</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.-cw_home-copy-2" transform="translate(-177.000000, -8212.000000)">
+            <g id="Group-44" transform="translate(179.000000, 8212.000000)">
+                <circle id="Oval-10" stroke="#FFFFFF" stroke-width="3" cx="26" cy="275" r="26"></circle>
+                <circle id="Oval-10-Copy" stroke="#FFFFFF" stroke-width="3" cx="289" cy="178" r="26"></circle>
+                <circle id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="3" cx="352" cy="250" r="26"></circle>
+                <circle id="Oval-10-Copy-3" stroke="#FFFFFF" stroke-width="3" cx="478" cy="175" r="26"></circle>
+                <circle id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="3" cx="444" cy="385" r="26"></circle>
+                <circle id="Oval-10-Copy-5" stroke="#FFFFFF" stroke-width="3" cx="261" cy="369" r="26"></circle>
+                <circle id="Oval-11" fill="#FFFFFF" cx="26" cy="275" r="20"></circle>
+                <circle id="Oval-11-Copy" fill="#FFFFFF" cx="289" cy="178" r="20"></circle>
+                <g id="ic-person-24px" transform="translate(281.000000, 170.000000)" fill-rule="nonzero" fill="#4990E2">
+                    <path d="M8,8 C10.21,8 12,6.21 12,4 C12,1.79 10.21,0 8,0 C5.79,0 4,1.79 4,4 C4,6.21 5.79,8 8,8 Z M8,10 C5.33,10 0,11.34 0,14 L0,16 L16,16 L16,14 C16,11.34 10.67,10 8,10 Z" id="Shape"></path>
+                </g>
+                <circle id="Oval-11-Copy-2" fill="#FFFFFF" cx="352" cy="250" r="20"></circle>
+                <g id="manager" transform="translate(344.000000, 240.000000)" fill-rule="nonzero" fill="#4990E2">
+                    <path d="M8.00069869,8.18976419 C10.258655,8.18976419 12.0955808,6.35283843 12.0955808,4.0948821 C12.0955808,1.83692576 10.258655,0 8.00069869,0 C5.74274236,0 3.90581659,1.83692576 3.90581659,4.0948821 C3.90581659,6.35283843 5.74274236,8.18976419 8.00069869,8.18976419 Z" id="Shape"></path>
+                    <path d="M13.495476,10.1741834 C13.4937293,10.1736245 13.4903755,10.1723668 13.4886288,10.1719476 C12.9554585,10.0417118 11.3227598,9.81331004 11.3227598,9.81331004 C11.1384454,9.75657642 10.9414847,9.85418341 10.875179,10.0360524 L8.41760699,16.7790393 C8.27584279,17.168 7.72569432,17.168 7.58393013,16.7790393 L5.12635808,10.0360524 C5.07283843,9.88918777 4.93421834,9.79710044 4.78567686,9.79710044 C4.75046288,9.79710044 3.07172052,10.0324891 2.51283843,10.1714585 C0.985641921,10.5511965 0.0223580786,12.0529607 0.0223580786,13.6180262 L0.0223580786,19.2286463 C0.0223580786,20.0694498 0.704,20.7510917 1.54480349,20.7510917 L14.4553362,20.7510917 C15.2961397,20.7510917 15.9777817,20.0694498 15.9777817,19.2286463 L15.9777817,13.5993712 C15.9777118,12.041083 14.9766987,10.6581659 13.495476,10.1741834 Z" id="Shape"></path>
+                    <path d="M8.92751092,9.68475109 C8.82941485,9.57785153 8.68604367,9.52412227 8.54099563,9.52412227 L7.45907424,9.52412227 C7.3140262,9.52412227 7.17058515,9.5779214 7.07255895,9.68475109 C6.92073362,9.85020087 6.89865502,10.0892227 7.00646288,10.2759825 L7.58483843,11.1478777 L7.31409607,13.4318952 L7.84726638,14.8502358 C7.89924891,14.9929083 8.1009607,14.9929083 8.15294323,14.8502358 L8.68611354,13.4318952 L8.41537118,11.1478777 L8.99374672,10.2759825 C9.10141485,10.0892227 9.07933624,9.85020087 8.92751092,9.68475109 L8.92751092,9.68475109 Z" id="Shape"></path>
+                </g>
+                <circle id="Oval-11-Copy-3" fill="#FFFFFF" cx="478" cy="175" r="20"></circle>
+                <g id="police-officer-1.3" transform="translate(466.000000, 163.000000)">
+                    <g id="Frames-24px">
+                        <rect id="Rectangle-path" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                    <g id="Solid" transform="translate(4.000000, 3.000000)" fill-rule="nonzero" fill="#4990E2">
+                        <g id="Group">
+                            <path d="M8,0 L1,2 L2,4 C2,4 2,4.592 2,5 C2,5.424 2.398,5.816 3.072,6.14 C3.028,6.428 3,6.717 3,7 C3,9.757 5.243,12 8,12 C10.757,12 13,9.757 13,7 C13,6.717 12.972,6.428 12.928,6.14 C13.602,5.816 14,5.424 14,5 C14,4.133 14,4.012 14,4 L15,2 L8,0 Z M6,2 L10,2 L10,4 L8,5 L6,4 L6,2 Z M8,10 C6.346,10 5,8.654 5,7 C5,6.914 5.019,6.823 5.026,6.735 C5.903,6.903 6.917,7 8,7 C9.083,7 10.097,6.903 10.974,6.735 C10.981,6.823 11,6.914 11,7 C11,8.654 9.654,10 8,10 Z" id="Shape"></path>
+                            <path d="M8,13 C3.29,13 0,15.467 0,19 L0,21 L16,21 L16,19 C16,15.467 12.71,13 8,13 Z M8,20 C7.447,20 7,19.553 7,19 C7,18.447 7.447,18 8,18 C8.553,18 9,18.447 9,19 C9,19.553 8.553,20 8,20 Z M8,17 C7.447,17 7,16.553 7,16 C7,15.447 7.447,15 8,15 C8.553,15 9,15.447 9,16 C9,16.553 8.553,17 8,17 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="police-officer-1.3-copy" transform="translate(14.000000, 263.000000)">
+                    <g id="Frames-24px">
+                        <rect id="Rectangle-path" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                    <g id="Solid" transform="translate(4.000000, 3.000000)" fill-rule="nonzero" fill="#4990E2">
+                        <g id="Group">
+                            <path d="M8,0 L1,2 L2,4 C2,4 2,4.592 2,5 C2,5.424 2.398,5.816 3.072,6.14 C3.028,6.428 3,6.717 3,7 C3,9.757 5.243,12 8,12 C10.757,12 13,9.757 13,7 C13,6.717 12.972,6.428 12.928,6.14 C13.602,5.816 14,5.424 14,5 C14,4.133 14,4.012 14,4 L15,2 L8,0 Z M6,2 L10,2 L10,4 L8,5 L6,4 L6,2 Z M8,10 C6.346,10 5,8.654 5,7 C5,6.914 5.019,6.823 5.026,6.735 C5.903,6.903 6.917,7 8,7 C9.083,7 10.097,6.903 10.974,6.735 C10.981,6.823 11,6.914 11,7 C11,8.654 9.654,10 8,10 Z" id="Shape"></path>
+                            <path d="M8,13 C3.29,13 0,15.467 0,19 L0,21 L16,21 L16,19 C16,15.467 12.71,13 8,13 Z M8,20 C7.447,20 7,19.553 7,19 C7,18.447 7.447,18 8,18 C8.553,18 9,18.447 9,19 C9,19.553 8.553,20 8,20 Z M8,17 C7.447,17 7,16.553 7,16 C7,15.447 7.447,15 8,15 C8.553,15 9,15.447 9,16 C9,16.553 8.553,17 8,17 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+                <circle id="Oval-11-Copy-4" fill="#FFFFFF" cx="444" cy="385" r="20"></circle>
+                <g id="ic-person-24px-copy" transform="translate(436.000000, 377.000000)" fill-rule="nonzero" fill="#4990E2">
+                    <path d="M8,8 C10.21,8 12,6.21 12,4 C12,1.79 10.21,0 8,0 C5.79,0 4,1.79 4,4 C4,6.21 5.79,8 8,8 Z M8,10 C5.33,10 0,11.34 0,14 L0,16 L16,16 L16,14 C16,11.34 10.67,10 8,10 Z" id="Shape"></path>
+                </g>
+                <circle id="Oval-11-Copy-5" fill="#FFFFFF" cx="261" cy="369" r="20"></circle>
+                <g id="police-officer-1.3" transform="translate(249.000000, 355.000000)">
+                    <g id="Frames-24px">
+                        <rect id="Rectangle-path" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                    <g id="Solid" transform="translate(4.000000, 3.000000)" fill-rule="nonzero" fill="#4990E2">
+                        <g id="Group">
+                            <path d="M8,0 L1,2 L2,4 C2,4 2,4.592 2,5 C2,5.424 2.398,5.816 3.072,6.14 C3.028,6.428 3,6.717 3,7 C3,9.757 5.243,12 8,12 C10.757,12 13,9.757 13,7 C13,6.717 12.972,6.428 12.928,6.14 C13.602,5.816 14,5.424 14,5 C14,4.133 14,4.012 14,4 L15,2 L8,0 Z M6,2 L10,2 L10,4 L8,5 L6,4 L6,2 Z M8,10 C6.346,10 5,8.654 5,7 C5,6.914 5.019,6.823 5.026,6.735 C5.903,6.903 6.917,7 8,7 C9.083,7 10.097,6.903 10.974,6.735 C10.981,6.823 11,6.914 11,7 C11,8.654 9.654,10 8,10 Z" id="Shape"></path>
+                            <path d="M8,13 C3.29,13 0,15.467 0,19 L0,21 L16,21 L16,19 C16,15.467 12.71,13 8,13 Z M8,20 C7.447,20 7,19.553 7,19 C7,18.447 7.447,18 8,18 C8.553,18 9,18.447 9,19 C9,19.553 8.553,20 8,20 Z M8,17 C7.447,17 7,16.553 7,16 C7,15.447 7.447,15 8,15 C8.553,15 9,15.447 9,16 C9,16.553 8.553,17 8,17 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+                <path d="M53.5,248.5 L180.779221,121.220779" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M62.5,275.5 L149.505747,275.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <circle id="Oval-12" fill="#FFFFFF" cx="168" cy="275" r="8"></circle>
+                <circle id="Oval-12-Copy" fill="#FFFFFF" cx="192" cy="110" r="8"></circle>
+                <path d="M203.5,116.5 L263.5,155.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M160.5,218.5 L60.5,259.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M185.5,220.5 L285.5,297.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M181.5,278.5 L282.5,305.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M166.5,289.5 L162.5,336.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M176.5,353.5 L225.5,364.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M291.5,322.5 L280.5,339.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M311.5,315.5 L346.5,334.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M307.5,296.5 L326.5,276.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M313.5,200.5 L331.5,221.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M394.5,201.5 L376.5,221.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M400.5,110.5 L403.5,172.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M388.5,103.5 L314.5,153.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M290.5,17.5 L202.5,97.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M311.5,18.5 L388.5,83.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M412.5,88.5 L506.5,52.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M527.5,59.5 L545.5,112.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M538.5,136.5 L509.5,154.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M418.5,189.5 L444.5,182.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M470.5,207.5 L459.5,292.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M373.5,339.5 L442.5,316.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M380.5,268.5 L441.5,298.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M356.5,284.5 L359.5,324.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M468.5,318.5 L521.5,362.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M532.5,358.5 L532.5,246.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M502.5,196.5 L524.5,220.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M475.5,397.5 L505.5,406.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M410.5,372.5 L371.5,349.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M529.5,384.5 L525.5,399.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <circle id="Oval-12-Copy-2" fill="#FFFFFF" cx="174" cy="213" r="8"></circle>
+                <circle id="Oval-12-Copy-5" fill="#FFFFFF" cx="298" cy="309" r="8"></circle>
+                <circle id="Oval-12-Copy-8" fill="#FFFFFF" cx="360" cy="341" r="8"></circle>
+                <circle id="Oval-12-Copy-9" fill="#FFFFFF" cx="456" cy="309" r="8"></circle>
+                <circle id="Oval-12-Copy-10" fill="#FFFFFF" cx="533" cy="232" r="8"></circle>
+                <circle id="Oval-12-Copy-11" fill="#FFFFFF" cx="533" cy="373" r="8"></circle>
+                <circle id="Oval-12-Copy-12" fill="#FFFFFF" cx="521" cy="411" r="8"></circle>
+                <circle id="Oval-12-Copy-13" fill="#FFFFFF" cx="301" cy="8" r="8"></circle>
+                <circle id="Oval-12-Copy-14" fill="#FFFFFF" cx="521" cy="48" r="8"></circle>
+                <circle id="Oval-12-Copy-15" fill="#FFFFFF" cx="549" cy="128" r="8"></circle>
+                <circle id="Oval-12-Copy-6" fill="#FFFFFF" cx="403" cy="190" r="8"></circle>
+                <circle id="Oval-12-Copy-7" fill="#FFFFFF" cx="399" cy="96" r="8"></circle>
+                <circle id="Oval-12-Copy-4" fill="#FFFFFF" cx="162" cy="351" r="8"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

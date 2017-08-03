@@ -7,8 +7,8 @@ export default class Header extends Component {
         super();
         this.state = {
             headerPosition: false,
-            activeSectionIndex: 0,
-            lastScrollTop: 0,
+            // activeSectionIndex: 0,
+            // lastScrollTop: 0,
             menuCollapse: false
         };
     }
@@ -31,29 +31,29 @@ export default class Header extends Component {
         })
     };
 
-    getSections() {
-        return Array.prototype.slice.call(document.getElementsByTagName('section'));
-    }
+    // getSections() {
+    //     return Array.prototype.slice.call(document.getElementsByTagName('section'));
+    // }
 
     handleScroll = () => {
         const scrollTop = document.body.scrollTop;
-        const {activeSectionIndex, lastScrollTop} = this.state;
-        const direction = lastScrollTop > scrollTop ? -1 : 1;
-        const sections = this.getSections();
-        const newActiveSectionIndex = activeSectionIndex + direction;
-        const nextSection = sections[newActiveSectionIndex];
-        if (nextSection) {
-            const sectionOffsetTop = nextSection.getBoundingClientRect().top;
-            const sectionOffsetBottom = nextSection.getBoundingClientRect().bottom;
-            if (direction === 1 && sectionOffsetTop <= 70 || direction === -1 && sectionOffsetBottom >= 70) {
-                this.setState({
-                    activeSectionIndex: newActiveSectionIndex
-                });
-            }
-            this.setState({
-                lastScrollTop: scrollTop
-            });
-        }
+        // const {activeSectionIndex, lastScrollTop} = this.state;
+        // const direction = lastScrollTop > scrollTop ? -1 : 1;
+        // const sections = this.getSections();
+        // const newActiveSectionIndex = activeSectionIndex + direction;
+        // const nextSection = sections[newActiveSectionIndex];
+        // if (nextSection) {
+        //     const sectionOffsetTop = nextSection.getBoundingClientRect().top;
+        //     const sectionOffsetBottom = nextSection.getBoundingClientRect().bottom;
+        //     if (direction === 1 && sectionOffsetTop <= 70 || direction === -1 && sectionOffsetBottom >= 70) {
+        //         this.setState({
+        //             activeSectionIndex: newActiveSectionIndex
+        //         });
+        //     }
+        //     this.setState({
+        //         lastScrollTop: scrollTop
+        //     });
+        // }
         this.setState({
             headerPosition: scrollTop > 100
         });
@@ -61,37 +61,36 @@ export default class Header extends Component {
 
     toggleClass = () => {
         const currentState = this.state.menuCollapse;
-        this.setState({ menuCollapse: !currentState });
+        this.setState({menuCollapse: !currentState});
     };
-
 
 
     render() {
         return (
             <header className={this.state.headerPosition ? "scrolled" : ""}>
                 <div className="header-buttons">
-                    <Link to="/ico">CareWallet ICO Underway Buy Tokens</Link>
+                    <Link to="/ico">SmartCare Wallet ICO Underway Buy Tokens</Link>
                 </div>
                 <div className="header-wrap">
                     <Link className="logo" to="/main">
                         <div className="logo__img"/>
-                        <span>CareWallet</span>
+                        <span>SmartCare Wallet</span>
                     </Link>
-                    <div className={this.state.menuCollapse ? 'open': 'close'} onClick={this.toggleClass} id="burger-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <div className={this.state.menuCollapse ? 'open' : 'close'} onClick={this.toggleClass}
+                         id="burger-menu">
+                        <span/>
+                        <span/>
+                        <span/>
                     </div>
-                    <ul className={this.state.menuCollapse ? 'nav open': 'nav'}>
-                        <li><a className={this.state.activeSectionIndex === 1 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="0" href="javascript:void(0)">Product</a></li>
+                    <ul className={this.state.menuCollapse ? 'nav open' : 'nav'}>
+                        <li><Link to="/main">Product</Link></li>
                         <li><Link to="/company">Company</Link></li>
-                         <li><a className={this.state.activeSectionIndex === 3 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Community</a></li>
+                        <li><a className={this.state.activeSectionIndex === 3 ? "active" : ""}
+                               href="javascript:void(0)">Community</a></li>
                         <li><a className={this.state.activeSectionIndex === 4 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="1" href="javascript:void(0)">Media</a></li>
+                               href="javascript:void(0)">Media</a></li>
                         <li><a className={this.state.activeSectionIndex === 2 ? "active" : ""}
-                               onClick={this.handleNavLinkClick} id="7" href="javascript:void(0)">ICO</a></li>
+                               href="javascript:void(0)">ICO</a></li>
                     </ul>
                 </div>
             </header>
