@@ -102,6 +102,26 @@ export class TodoService {
             }, 10);
         });
     }
+
+    deleteData(data) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                this.todos.splice(this.todos.indexOf(data), 1);
+                resolve(data);
+            }, 10);
+        });
+    }
+
+    editData(oldData, newData) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                this.todos.splice(this.todos.indexOf(oldData), 1, newData);
+                resolve(newData);
+            }, 10);
+        });
+    }
+
+
 }
 
 export default new TodoService();

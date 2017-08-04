@@ -1,14 +1,23 @@
 import React, {Component, PropTypes} from 'react';
+import {Todo} from "../../../../constans/index";
 
 export default class TodoModal extends Component {
     static propTypes = {
         isOpened: PropTypes.bool,
+        editedTodo: Todo,
         onCloseModal: PropTypes.func,
         onSave: PropTypes.func
     };
 
     constructor(props) {
         super(props);
+    }
+
+    componentWillReceiveProps(nextProps) {
+    	if (this.props.editedTodo !== nextProps.editedTodo && nextProps.editedTodo) {
+    	    this.heading.value = nextProps.editedTodo.heading;
+    	    this.text.value = nextProps.editedTodo.text;
+        }
     }
 
     handleCancel = () => {

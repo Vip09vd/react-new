@@ -1427,3 +1427,14 @@ strong {
     align-items: center;
   }
 }
+
+.dropdown-item{
+  display: flex;
+  align-items: center;
+  input{
+    margin-right: 10px;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from "./Head/index";
 import Tooltip from "../Tooltip/index";
-import Advisors from "../Company/Advisors/index";
 import TodoList from "./TodoList/index";
+import Multiselect from "./Multiselect/index";
 
 export default class Main extends React.Component {
     render() {
@@ -41,6 +41,7 @@ export default class Main extends React.Component {
                     </div>
                 </section>
                 <TodoList/>
+                <Multiselect/>
                 {/*<section className="revolution">*/}
                 {/*<div className="container">*/}
                 {/*<div className="section-description">*/}

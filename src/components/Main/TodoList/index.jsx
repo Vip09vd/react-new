@@ -11,6 +11,7 @@ export default class TodoList extends Component {
             todos: [],
             isModalOpened: false,
             todosTotalCount: 0,
+            editedTodo: null
         };
     }
 
@@ -51,8 +52,49 @@ export default class TodoList extends Component {
     };
 
     handleSaveData = (newTodo) => {
-        todoService.addData(newTodo)
-            .then((newTodoFromBack) => this.setState({todos: [newTodoFromBack, ...this.state.todos], isModalOpened:false}));
+        const oldData = this.state.editedTodo;
+        if (!oldData) {
+            todoService.addData(newTodo)
+                .then((newTodoFromBack) => this.setState({
+                    todos: [newTodoFromBack, ...this.state.todos],
+                    isModalOpened: false
+                }));
+        } else {
+            todoService.editData(oldData, newTodo)
+                .then((newTodoFromBack) => {
+                    const newTodosBefore = this.state.todos.slice(0, this.state.todos.indexOf(oldData));
+                    newTodosBefore.push(newTodoFromBack);
+                    const newTodosAfter = this.state.todos.slice(this.state.todos.indexOf(oldData) + 1, this.state.todos.length);
+                    const newTodos = newTodosBefore.concat(newTodosAfter);
+                    this.setState({
+                        todos: newTodos,
+                        isModalOpened: false,
+                        editedTodo: null
+                    })
+                })
+        }
+    };
+
+    handleDelete = (todo) => {
+        todoService.deleteData(todo)
+            .then((deletedTodo) => {
+                const newTodosBefore = this.state.todos.slice(0, this.state.todos.indexOf(deletedTodo));
+                const newTodosAfter = this.state.todos.slice(this.state.todos.indexOf(deletedTodo) + 1, this.state.todos.length);
+                const newTodos = newTodosBefore.concat(newTodosAfter);
+                if (!newTodos.length) {
+                    this.getData(0);
+                }
+                this.setState({
+                    todos: newTodos
+                })
+            });
+    };
+
+    handleEdit = (todo) => {
+        this.setState({
+            isModalOpened: true,
+            editedTodo: todo
+        });
     };
 
     render() {
@@ -66,12 +108,17 @@ export default class TodoList extends Component {
                     </div>
                     <div ref={(div) => this.scrolledList = div} className="todo-list-wrapper">
                         {/*можно навесить onScroll вместо listener*/}
-                        {todos && todos.map((todo, index) => <Todo todo={todo} key={index} onDelete={this.handleDelete}/>)}
+                        {todos && todos.map((todo, index) => <Todo todo={todo}
+                                                                   key={index}
+                                                                   onDelete={this.handleDelete}
+                                                                   onEdit={this.handleEdit}
+                        />)}
                     </div>
                 </div>
                 <TodoModal onSave={this.handleSaveData}
                            onCloseModal={this.handleCloseModal}
                            isOpened={this.state.isModalOpened}
+                           editedTodo={this.state.editedTodo}
                 />
             </section>
         );
