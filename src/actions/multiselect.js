@@ -1,9 +1,11 @@
 import countryService from "../services/country.service";
 
-export function getData() {
-    return function (dispatch, getState) {
+export function getCountries() {
+    return function (dispatch) {
+        dispatch({type: 'COUNTRIES_REQUEST'});
         countryService.getData()
-            .then((data) => this.setState({
+            .then((data) => dispatch({
+                type: 'COUNTRIES_SUCCESS',
                 countries: data
             }));
     }
@@ -23,12 +25,23 @@ export function closeDropdown() {
     }
 }
 
-export function handleSearchChange({target}) {
-    countryService.searchCountry(target.value)
-        .then((countries) => this.setState({
-            countries
-        }))
-        .catch(() => {
-            throw new Error('Hello Andrew');
-        })
+export function searchCountries(country) {
+    return function (dispatch) {
+        dispatch({type: 'SEARCH_COUNTRIES_REQUEST'});
+        countryService.searchCountry(country)
+            .then((countries) => dispatch({
+                type: 'SEARCH_COUNTRIES_SUCCESS',
+                countries: countries
+            }))
+            .catch(() => {
+                throw new Error('Hello Andrew');
+            })
+    }
+}
+
+export function toggleCountry(country, isChecked) {
+    return {
+        type: 'TOGGLE_COUNTRY',
+        payload: {country, isChecked}
+    }
 }

@@ -1,25 +1,26 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 
 export default class DropdownItem extends Component {
-	static propTypes = {
-		country: PropTypes.string,
-		onCheck: PropTypes.func
-	};
+    static propTypes = {
+        country: PropTypes.string,
+        isChecked: PropTypes.bool,
+        onInputChange: PropTypes.func
+    };
 
     constructor(props) {
-		super(props);
-	}
+        super(props);
+    }
 
-	handleCheck = () => {
-    	this.props.onCheck();
-	};
+    handleInputChange = () => {
+        this.props.onInputChange(this.props.country, !this.props.isChecked);
+    };
 
-	render() {
-		return (
+    render() {
+        return (
             <label className="dropdown-item">
-                <input checked={this.handleCheck} type="checkbox"/>
+                <input type="checkbox" checked={this.props.isChecked || false} onChange={this.handleInputChange}/>
                 <p className="country">{this.props.country}</p>
             </label>
-		);
-	}
+        );
+    }
 }

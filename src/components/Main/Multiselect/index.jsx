@@ -1,34 +1,27 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import countryService from '../../../services/country.service';
 import DropdownList from "./DropdownList/index";
 import Search from "./Search/index";
-import {closeDropdown, openDropdown} from "../../../actions/multiselect";
+import {closeDropdown, getCountries, openDropdown, searchCountries} from "../../../actions/multiselect";
 import bindActionCreators from "redux/es/bindActionCreators";
 
 class Multiselect extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            countries: []
-        }
-    }
+    static propTypes = {
+    	isOpened: PropTypes.bool,
+        countries: PropTypes.arrayOf(PropTypes.string),
+        openDropdown: PropTypes.func,
+        closeDropdown: PropTypes.func,
+        getCountries: PropTypes.func,
+        searchCountries: PropTypes.func
+    };
 
     componentDidMount() {
-        this.getData();
+        this.props.getCountries();
         document.addEventListener('click', this.handleDocumentClick);
     }
 
     componentWillUnmount() {
         document.removeEventListener('click', this.handleDocumentClick);
-    }
-
-    getData() {
-        countryService.getData()
-            .then((data) => this.setState({
-                countries: data
-            }));
     }
 
     handleSearchClick = () => {
@@ -42,13 +35,7 @@ class Multiselect extends Component {
     };
 
     handleSearchChange = ({target}) => {
-        countryService.searchCountry(target.value)
-            .then((countries) => this.setState({
-                countries
-            }))
-            .catch(() => {
-                throw new Error('Idi naxui');
-            })
+        this.props.searchCountries(target.value);
     };
 
     checkClick = (event) => {
@@ -82,7 +69,9 @@ function mapStateToProps(store) {
 function mapDispatchToProps(dispatch) {
     return {
         openDropdown: bindActionCreators(openDropdown, dispatch),
-        closeDropdown: bindActionCreators(closeDropdown, dispatch)
+        closeDropdown: bindActionCreators(closeDropdown, dispatch),
+        getCountries: bindActionCreators(getCountries, dispatch),
+        searchCountries: bindActionCreators(searchCountries, dispatch)
     }
 }
 
