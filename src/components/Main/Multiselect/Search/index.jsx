@@ -1,26 +1,27 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 
 export default class Search extends Component {
-	static propTypes = {
+    static propTypes = {
         onClick: PropTypes.func,
         onChange: PropTypes.func
-	};
+    };
 
     constructor(props) {
-		super(props);
-	}
+        super(props);
+    }
 
-	handleSearchClick = () => {
-	    this.props.onClick();
+    handleSearchClick = () => {
+        this.props.onClick();
     };
 
-	handleSearchChange = () => {
-	    this.props.onChange();
+    handleSearchChange = (event) => {
+        this.props.onChange(event);
     };
 
-	render() {
-		return (
-            <input type="search" onClick={this.handleSearchClick} onChange={this.handleSearchChange} className="search-field"/>
-		);
-	}
+    render() {
+        return (
+            <input type="search" onClick={this.handleSearchClick} onChange={this.handleSearchChange}
+                   className="search-field"/>
+        );
+    }
 }

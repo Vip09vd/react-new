@@ -1428,13 +1428,35 @@ strong {
   }
 }
 
+.search-wrapper{
+  position: relative;
+}
+
+.dropdown-wrapper{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 10px;
+  box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  height: 150px;
+  overflow-y: auto;
+  width: 100%;
+  background: #fff;
+}
+
 .dropdown-item{
   display: flex;
   align-items: center;
+  padding: 3px 10px;
+  cursor: pointer;
   input{
     margin-right: 10px;
   }
   p{
     margin-bottom: 0;
   }
+  &:hover{
+    background: #eee;
+  }
 }
+

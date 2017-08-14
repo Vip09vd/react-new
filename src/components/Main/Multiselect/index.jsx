@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import countryService from '../../../services/country.service';
 import DropdownList from "./DropdownList/index";
 import Search from "./Search/index";
+import {closeDropdown, openDropdown} from "../../../actions/multiselect";
+import bindActionCreators from "redux/es/bindActionCreators";
 
-export default class Multiselect extends Component {
+class Multiselect extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            countries: [],
-            isOpened: false,
+            countries: []
         }
     }
 
@@ -19,30 +21,34 @@ export default class Multiselect extends Component {
     }
 
     componentWillUnmount() {
-    	document.removeEventListener('click', this.handleDocumentClick);
+        document.removeEventListener('click', this.handleDocumentClick);
     }
 
     getData() {
         countryService.getData()
-            .then((data) => this.setState({countries: data}));
+            .then((data) => this.setState({
+                countries: data
+            }));
     }
 
     handleSearchClick = () => {
-        this.setState({
-            isOpened: true
-        })
+        this.props.openDropdown();
     };
 
     handleDocumentClick = (event) => {
         if (!this.checkClick(event)) {
-            this.setState({
-                isOpened: false
-            })
+            this.props.closeDropdown();
         }
     };
 
-    handleSearchChange = () => {
-        //todo
+    handleSearchChange = ({target}) => {
+        countryService.searchCountry(target.value)
+            .then((countries) => this.setState({
+                countries
+            }))
+            .catch(() => {
+                throw new Error('Idi naxui');
+            })
     };
 
     checkClick = (event) => {
@@ -56,10 +62,28 @@ export default class Multiselect extends Component {
                     <div className="section-description">
                         <h2>Multiselect</h2>
                     </div>
-                    <Search onClick={this.handleSearchClick} onChange={this.handleSearchChange}/>
-                    {this.state.isOpened && <DropdownList countries={this.state.countries}/>}
+                    <div className="search-wrapper">
+                        <Search onClick={this.handleSearchClick} onChange={this.handleSearchChange}/>
+                        {this.props.isOpened && <DropdownList countries={this.props.countries}/>}
+                    </div>
                 </div>
             </section>
         );
     }
 }
+
+function mapStateToProps(store) {
+    return {
+        countries: store.countries,
+        isOpened: store.isOpened
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        openDropdown: bindActionCreators(openDropdown, dispatch),
+        closeDropdown: bindActionCreators(closeDropdown, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Multiselect);
